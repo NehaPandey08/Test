@@ -1,1 +1,19 @@
-test
+Got it. Here is the full updated BApp row and the new S3 Bucket row:
+
+---
+
+**BApp | INVEST | AMEND**
+
+Existing mobile channel amended to add Savings Calculator entry points:
+- Addition of new entry point from Savings section within BApp to launch the Calculator (S3)
+- Addition of new entry point from Product Selector to launch the Calculator with pre-populated recommended products (S4)
+- Addition of new in-app banner to launch the Calculator with pre-selected product (S2)
+- Addition of new push notification deep link to launch the Calculator with pre-selected product (S2)
+
+No changes to the BApp platform itself. Routes through existing BApp Gateway (5PR01).
+
+---
+
+**S3 Bucket | INVEST | AMEND**
+
+Existing AWS S3 Bucket amended to host the new Savings Calculator React Native bundle for BApp. Bundle is fetched by BApp Gateway (5PR01) on initialisation. No changes to the S3 Bucket infrastructure itself.
