@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Savings Calculator — Impact Summary</title>
+<style>
+  body { font-family: Arial, sans-serif; font-size: 12px; color: #1a1a1a; padding: 24px; }
+  h1 { font-size: 16px; font-weight: bold; color: #002D72; border-bottom: 2px solid #002D72; padding-bottom: 6px; margin-bottom: 4px; }
+  h2 { font-size: 11px; color: #666; margin-top: 2px; margin-bottom: 20px; font-weight: normal; }
+
+  table { border-collapse: collapse; width: 100%; margin-top: 12px; }
+  th { background: #002D72; color: white; padding: 8px 10px; text-align: left; font-size: 11px; border: 1px solid #001A5E; }
+  td { padding: 8px 10px; border: 1px solid #ddd; font-size: 11px; vertical-align: top; }
+  tr:nth-child(even) td { background: #f7f9fc; }
+
+  .tag { display: inline-block; font-size: 10px; font-weight: bold; padding: 2px 8px; border-radius: 3px; color: white; }
+  .new    { background: #1a7a3c; }
+  .amend  { background: #E8A020; color: #1a1a1a; }
+  .reuse  { background: #0095D9; }
+  .remove { background: #c0392b; }
+
+  .pos-invest   { font-weight: bold; color: #1a7a3c; }
+  .pos-maintain { font-weight: bold; color: #0075B0; }
+  .pos-update   { font-weight: bold; color: #E8A020; }
+
+  .item-no { font-weight: bold; color: #002D72; text-align: center; }
+  .comp-name { font-weight: bold; color: #002D72; }
+  .comp-desc { color: #666; font-style: italic; font-size: 10px; }
+  .dep { background: #fff8e6; border-left: 3px solid #E8A020; padding: 4px 6px; margin-top: 4px; font-size: 10px; color: #B87800; }
+  .blocker { background: #fff2f2; border-left: 3px solid #c0392b; padding: 4px 6px; margin-top: 4px; font-size: 10px; color: #c0392b; }
+
+  .section-header td { background: #E8EDF5; font-weight: bold; color: #002D72; font-size: 11px; }
+</style>
+</head>
+<body>
+
+<h1>Savings Calculator — HLD Impact Summary</h1>
+<h2>Savings Programme | Architecture | ADR-CALC-001 | Draft</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width:4%">Item</th>
+      <th style="width:18%">Component</th>
+      <th style="width:8%">Impact</th>
+      <th style="width:8%">House Position</th>
+      <th style="width:46%">Impact Summary</th>
+      <th style="width:16%">Impact Team / Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <!-- CHANNELS -->
+    <tr class="section-header"><td colspan="6">CHANNELS</td></tr>
+
+    <tr>
+      <td class="item-no">1</td>
+      <td>
+        <div class="comp-name">.co.uk</div>
+        <div class="comp-desc">Barclays public web entry point<br>[Container: Java]</div>
+      </td>
+      <td><span class="tag new">NEW</span></td>
+      <td class="pos-invest">INVEST</td>
+      <td>
+        The Savings Calculator introduces .co.uk as a new unauthenticated entry channel. Currently the calculator does not exist and .co.uk has no calculator entry point. The new solution allows unauthenticated customers to access the calculator directly via search, banner deep links, and push notifications without requiring login. No gateway sits between .co.uk and the Savings Calculator xAPI for this channel.
+      </td>
+      <td>Web Production<br>Resilience: TBD</td>
+    </tr>
+
+    <tr>
+      <td class="item-no">2</td>
+      <td>
+        <div class="comp-name">ROLB</div>
+        <div class="comp-desc">Barclays Retail Online Banking<br>[Container: Java]</div>
+      </td>
+      <td><span class="tag reuse">RE-USE</span></td>
+      <td class="pos-maintain">MAINTAIN</td>
+      <td>
+        ROLB is re-used as an existing authenticated channel. No changes required to the ROLB platform itself. The Savings Calculator is accessed via ROLB for authenticated customers navigating via search or Product Selector. ROLB routes through the existing ROLB Edge Gateway.
+      </td>
+      <td>Digital Core<br>ROLB Platform Team<br>Resilience: TBD</td>
+    </tr>
+
+    <tr>
+      <td class="item-no">3</td>
+      <td>
+        <div class="comp-name">BApp</div>
+        <div class="comp-desc">Barclays Mobile App<br>[Container: iOS / Android / React Native]</div>
+      </td>
+      <td><span class="tag reuse">RE-USE</span></td>
+      <td class="pos-maintain">MAINTAIN</td>
+      <td>
+        BApp is re-used as an existing authenticated mobile channel. No changes required to the BApp platform itself. Authenticated customers access the calculator via BApp. BApp routes through the existing BApp Gateway (5PR01). React Native bundles are fetched from the existing S3 Bucket on AWS.
+      </td>
+      <td>Digital Core App<br>APM0015224<br>Resilience: TBD</td>
+    </tr>
+
+    <!-- FRONT END -->
+    <tr class="section-header"><td colspan="6">FRONT END</td></tr>
+
+    <tr>
+      <td class="item-no">4</td>
+      <td>
+        <div class="comp-name">React Web UI (.co.uk)</div>
+        <div class="comp-desc">Savings Calculator — public web<br>[Container: React]</div>
+      </td>
+      <td><span class="tag new">NEW</span></td>
+      <td class="pos-invest">INVEST</td>
+      <td>
+        A new React Web UI is required to serve the Savings Calculator on the .co.uk unauthenticated channel. This renders the five-question flow, Q5 product selection dropdown (full catalogue), calculation summary, and graph. All calculation logic runs client-side against data loaded on initialisation. Covers scenarios S1 and S2.
+      </td>
+      <td>Web Production<br>Calculator Team<br>Resilience: TBD</td>
+    </tr>
+
+    <tr>
+      <td class="item-no">5</td>
+      <td>
+        <div class="comp-name">React Web UI (ROLB)</div>
+        <div class="comp-desc">Savings Calculator — ROLB authenticated<br>[Container: React]</div>
+      </td>
+      <td><span class="tag amend">AMEND</span></td>
+      <td class="pos-update">UPDATE</td>
+      <td>
+        The existing React Web UI is amended to support the Savings Calculator journey on ROLB. Additions include authenticated Q5 behaviour showing held accounts plus full catalogue, client-side calculation engine (three modes: forward, reverse-time, reverse-deposit), tiered rate logic, reward product disclaimer, and graph rendering. Covers scenario S3 and S4.
+      </td>
+      <td>Web Production<br>Calculator Team<br>Resilience: TBD</td>
+    </tr>
+
+    <tr>
+      <td class="item-no">6</td>
+      <td>
+        <div class="comp-name">React Native UI</div>
+        <div class="comp-desc">Savings Calculator — BApp mobile<br>[Container: React Native]</div>
+      </td>
+      <td><span class="tag amend">AMEND</span></td>
+      <td class="pos-update">UPDATE</td>
+      <td>
+        The existing React Native UI is amended to support the Savings Calculator journey on BApp. Identical functional scope to the ROLB React Web UI. Bundles are served via the existing S3 Bucket. Covers scenarios S3 and S4.
+      </td>
+      <td>Digital Core App<br>Calculator Team<br>Resilience: TBD</td>
+    </tr>
+
+    <tr>
+      <td class="item-no">7</td>
+      <td>
+        <div class="comp-name">Tealium</div>
+        <div class="comp-desc">Journey analytics<br>[Cloud Service]</div>
+      </td>
+      <td><span class="tag reuse">RE-USE</span></td>
+      <td class="pos-maintain">MAINTAIN</td>
+      <td>
+        Tealium is re-used on all three channels (.co.uk, ROLB, BApp) for journey data capture. No changes to the Tealium platform. New tagging events will be configured for the calculator journey: session start, entry point capture, question completion, calculation generated, edit triggered, abandonment per step, and error events.
+      </td>
+      <td>Analytics Team<br>Resilience: TBD</td>
+    </tr>
+
+    <!-- GATEWAYS -->
+    <tr class="section-header"><td colspan="6">GATEWAYS</td></tr>
+
+    <tr>
+      <td class="item-no">8</td>
+      <td>
+        <div class="comp-name">ROLB Edge Gateway</div>
+        <div class="comp-desc">Internet Banking Application Gateway<br>[Container: Java, Spring]</div>
+      </td>
+      <td><span class="tag reuse">RE-USE</span></td>
+      <td class="pos-maintain">MAINTAIN</td>
+      <td>
+        The existing ROLB Edge Gateway is re-used to route API calls from the ROLB React Web UI to the Savings Calculator xAPI. No changes required. Handles security, session handling, and request routing as per existing behaviour.
+      </td>
+      <td>Digital Core<br>Resilience: TBD</td>
+    </tr>
+
+    <tr>
+      <td class="item-no">9</td>
+      <td>
+        <div class="comp-name">BApp Gateway (5PR01)</div>
+        <div class="comp-desc">Mobile Application Gateway<br>[Container: Java, Spring, SDM Bucket]</div>
+      </td>
+      <td><span class="tag reuse">RE-USE</span></td>
+      <td class="pos-maintain">MAINTAIN</td>
+      <td>
+        The existing BApp Gateway (5PR01) is re-used to route API calls from the React Native UI to the Savings Calculator xAPI. No changes required. Handles security, session handling, and API request routing as per existing behaviour.
+      </td>
+      <td>Digital Core App<br>Resilience: TBD</td>
+    </tr>
+
+    <!-- xAPI ZONE -->
+    <tr class="section-header"><td colspan="6">xAPI ZONE — FIREWALL</td></tr>
+
+    <tr>
+      <td class="item-no">10</td>
+      <td>
+        <div class="comp-name">Savings Calculator xAPI</div>
+        <div class="comp-desc">DAP API for Savings Calculator<br>[Container: Java] — New</div>
+      </td>
+      <td><span class="tag new">NEW</span></td>
+      <td class="pos-invest">INVEST</td>
+      <td>
+        A new xAPI is required sitting in the firewall zone as the single entry point for all three channels. Responsibilities include capturing entry point context (search, Product Page, Product Selector, banner, deep link), performing TIAA token exchange for authenticated journeys (S3, S4), orchestrating init calls to the Savings Products Catalogue Query API and AEM API Gateway, and for S3 also calling the Current and Savings Accounts Holdings Query API. Returns a single merged response to the client on initialisation. No further API calls are made after init. All four scenarios are served by this single xAPI.
+        <div class="dep">Dependency: Savings Products Catalogue Query API (new domain API) and new UKBA/AMS Product Enquiry sAPI must be available before end-to-end testing.</div>
+      </td>
+      <td>Calculator Team<br>New build<br>Resilience: TBD</td>
+    </tr>
+
+    <tr>
+      <td class="item-no">11</td>
+      <td>
+        <div class="comp-name">TIAA</div>
+        <div class="comp-desc">Trusted Identity and Attribute Authority<br>[Java]</div>
+      </td>
+      <td><span class="tag reuse">RE-USE</span></td>
+      <td class="pos-maintain">MAINTAIN</td>
+      <td>
+        TIAA is re-used for token exchange on authenticated journeys (S3 and S4). The Savings Calculator xAPI calls TIAA to exchange the inbound app token for a new token before calling downstream campus zone APIs. No changes to TIAA. No TIAA interaction on unauthenticated journeys (S1, S2).
+      </td>
+      <td>Security Platform<br>Resilience: TBD</td>
+    </tr>
+
+    <tr>
+      <td class="item-no">12</td>
+      <td>
+        <div class="comp-name">Journey Registry xAPI</div>
+        <div class="comp-desc">Digital Journey Registry Management<br>[Container: Java]</div>
+      </td>
+      <td><span class="tag reuse">RE-USE</span></td>
+      <td class="pos-maintain">MAINTAIN</td>
+      <td>
+        The existing Journey Registry xAPI is re-used for session registration across all four scenarios. No changes required. The Savings Calculator xAPI registers the journey on session initialisation. Entry point context is captured and passed at this point.
+      </td>
+      <td>Digital Core<br>Resilience: TBD</td>
+    </tr>
+
+    <!-- CAMPUS ZONE — PRODUCT DATA -->
+    <tr class="section-header"><td colspan="6">CAMPUS ZONE — PRODUCT DATA</td></tr>
+
+    <tr>
+      <td class="item-no">13</td>
+      <td>
+        <div class="comp-name">Savings Products Catalogue Query API</div>
+        <div class="comp-desc">Domain API — product data<br>[Container: Java] — New</div>
+      </td>
+      <td><span class="tag new">NEW</span></td>
+      <td class="pos-invest">INVEST</td>
+      <td>
+        A new Domain API is required in the campus zone. It is the single source of normalised product data for the calculator, aggregating variable rate data from SDH and fixed rate data from the new UKBA/AMS Product Enquiry sAPI into a common product schema. Exposes two endpoints: Savings Product List GET (full catalogue, S1 and S3) and Savings Product Detail GET (one or more product codes, S2 and S4). Uses Ehcache internally to reduce load on upstream sAPIs. Reusable beyond the calculator. Per ADR-CALC-001.
+        <div class="dep">Dependency: New UKBA/AMS Product Enquiry sAPI required for fixed rate product data. This is on the critical path.</div>
+      </td>
+      <td>Calculator Team<br>New build<br>Resilience: TBD</td>
+    </tr>
+
+    <tr>
+      <td class="item-no">14</td>
+      <td>
+        <div class="comp-name">AEM API Gateway</div>
+        <div class="comp-desc">AEM Gateway Webweaver<br>[Container: GraphQL]</div>
+      </td>
+      <td><span class="tag reuse">RE-USE</span></td>
+      <td class="pos-maintain">MAINTAIN</td>
+      <td>
+        The existing AEM API Gateway is re-used to serve calculator content to the xAPI on initialisation. Content includes question labels, tooltip text, disclaimer text, validation messages, and information icon content. Called on every scenario initialisation. No changes to the gateway itself. New AEM content components must be authored for the calculator.
+      </td>
+      <td>Web Production<br>AEM Team<br>Resilience: TBD</td>
+    </tr>
+
+    <tr>
+      <td class="item-no">15</td>
+      <td>
+        <div class="comp-name">AEM</div>
+        <div class="comp-desc">Adobe Experience Manager<br>[External Cloud — Adobe CMS]</div>
+      </td>
+      <td><span class="tag amend">AMEND</span></td>
+      <td class="pos-update">UPDATE</td>
+      <td>
+        AEM is amended to author and publish Savings Calculator content. New content components must be created covering: five question labels, tooltip text for each interest rate field (including variable rate change warning and per-tier tooltip), withdrawal disclaimer for reward products, ISA disclaimer, validation messages, and information icon content. No changes to the AEM platform itself. Content authoring effort required.
+      </td>
+      <td>AEM Team<br>APM0006220<br>Resilience: TBD</td>
+    </tr>
+
+    <tr>
+      <td class="item-no">16</td>
+      <td>
+        <div class="comp-name">Ehcache</div>
+        <div class="comp-desc">Product rate cache<br>[Component: Java]</div>
+      </td>
+      <td><span class="tag reuse">RE-USE</span></td>
+      <td class="pos-maintain">MAINTAIN</td>
+      <td>
+        Ehcache is re-used within the Savings Products Catalogue Query API to cache product rate data and reduce repeated calls to the Static Data Hub sAPI and UKBA/AMS Product Enquiry sAPI. Cache TTL to be confirmed based on agreed data freshness requirements. No changes to Ehcache itself.
+      </td>
+      <td>Calculator Team<br>Resilience: TBD</td>
+    </tr>
+
+    <!-- CAMPUS ZONE — ACCOUNT DATA -->
+    <tr class="section-header"><td colspan="6">CAMPUS ZONE — ACCOUNT DATA (S3 Only)</td></tr>
+
+    <tr>
+      <td class="item-no">17</td>
+      <td>
+        <div class="comp-name">Current and Savings Accounts Holdings Query API</div>
+        <div class="comp-desc">Account holdings — all product types<br>[Component: Java, Spring Boot]</div>
+      </td>
+      <td><span class="tag reuse">RE-USE</span></td>
+      <td class="pos-maintain">MAINTAIN</td>
+      <td>
+        The existing Current and Savings Accounts Holdings Query API is re-used for S3 to retrieve all held savings accounts for authenticated customers including variable rate, fixed rate bonds, ISAs, with current balances. This API already handles fixed rate product name retrieval from PSOS via profileMarker 127. Called by the Savings Calculator xAPI as the third init call for S3 only. Parameters passed: closedAccount=N (open accounts only). No changes to the API.
+      </td>
+      <td>Savings Platform Team<br>Resilience: TBD</td>
+    </tr>
+
+    <!-- ODS / sAPI ZONE -->
+    <tr class="section-header"><td colspan="6">ODS / sAPI ZONE</td></tr>
+
+    <tr>
+      <td class="item-no">18</td>
+      <td>
+        <div class="comp-name">Static Data Hub sAPI</div>
+        <div class="comp-desc">Variable rate product reference data<br>[Container: Java]</div>
+      </td>
+      <td><span class="tag reuse">RE-USE</span></td>
+      <td class="pos-maintain">MAINTAIN</td>
+      <td>
+        The existing Static Data Hub sAPI is re-used to retrieve variable rate product data including AER, gross rate, tiered configuration, reward product flag, and interest payment type. Called by the Savings Products Catalogue Query API for all scenarios. No changes required. Per ADR-CALC-001.
+      </td>
+      <td>SDH Team<br>Resilience: TBD</td>
+    </tr>
+
+    <tr>
+      <td class="item-no">19</td>
+      <td>
+        <div class="comp-name">New UKBA/AMS Product Enquiry sAPI</div>
+        <div class="comp-desc">Fixed rate product data by product code<br>[New — to be built by UKBA/AMS team]</div>
+      </td>
+      <td><span class="tag new">NEW</span></td>
+      <td class="pos-invest">INVEST</td>
+      <td>
+        A new sAPI is required to retrieve fixed rate product data from UKBA/AMS by product code. No existing sAPI provides product-level data (AER, gross rate, tier configuration, interest payment type) for fixed rate products without a customer account ID. The existing ZOS UKBA ISA Enquiry sAPI and ZOS UKBA Bonds Enquiry sAPI are account-level APIs and cannot be used for this purpose. The new sAPI must return all product-level attributes needed by the Savings Products Catalogue Query API to build the common product schema.
+        <div class="blocker">⚠ Hard blocker. This sAPI does not exist. Must be built by the UKBA/AMS team. Without it, fixed rate bonds and ISAs cannot be displayed in the calculator. This is on the critical path for all four scenarios and must be raised with the UKBA/AMS team as a priority dependency.</div>
+      </td>
+      <td>UKBA/AMS Team<br>External dependency<br>New build required<br>Resilience: TBD</td>
+    </tr>
+
+    <tr>
+      <td class="item-no">20</td>
+      <td>
+        <div class="comp-name">ODS Retail Product Holdings &amp; Account Data sAPI</div>
+        <div class="comp-desc">Customer account holdings<br>[Container: Java]</div>
+      </td>
+      <td><span class="tag reuse">RE-USE</span></td>
+      <td class="pos-maintain">MAINTAIN</td>
+      <td>
+        Re-used internally by the Current and Savings Accounts Holdings Query API (item 17) for S3. Retrieves customer product holdings from ODS. No direct call from the calculator. No changes required.
+      </td>
+      <td>ODS Team<br>Resilience: TBD</td>
+    </tr>
+
+    <tr>
+      <td class="item-no">21</td>
+      <td>
+        <div class="comp-name">ODS Retail Account Enquiry sAPI</div>
+        <div class="comp-desc">Account balance retrieval<br>[Container: Java]</div>
+      </td>
+      <td><span class="tag reuse">RE-USE</span></td>
+      <td class="pos-maintain">MAINTAIN</td>
+      <td>
+        Re-used internally by the Current and Savings Accounts Holdings Query API (item 17) for S3. Called in batches of 15 account IDs to retrieve account balance. No direct call from the calculator. No changes required.
+      </td>
+      <td>ODS Team<br>Resilience: TBD</td>
+    </tr>
+
+    <tr>
+      <td class="item-no">22</td>
+      <td>
+        <div class="comp-name">ODS Retail Customer Enquiry sAPI</div>
+        <div class="comp-desc">Customer markers and addresses<br>[Container: Java]</div>
+      </td>
+      <td><span class="tag reuse">RE-USE</span></td>
+      <td class="pos-maintain">MAINTAIN</td>
+      <td>
+        Re-used internally by the Current and Savings Accounts Holdings Query API (item 17) for S3. Retrieves customer markers and demographic data from ODS. No direct call from the calculator. No changes required.
+      </td>
+      <td>ODS Team<br>Resilience: TBD</td>
+    </tr>
+
+    <!-- DATA STORES -->
+    <tr class="section-header"><td colspan="6">DATA STORES</td></tr>
+
+    <tr>
+      <td class="item-no">23</td>
+      <td>
+        <div class="comp-name">BUK Static Data Hub (SDH)</div>
+        <div class="comp-desc">Variable rate product data<br>[Container: Oracle Database]</div>
+      </td>
+      <td><span class="tag reuse">RE-USE</span></td>
+      <td class="pos-maintain">MAINTAIN</td>
+      <td>
+        SDH is the confirmed data store for variable rate product data per ADR-CALC-001. No changes to SDH itself. Accessed via the Static Data Hub sAPI. SDH is confirmed as not subject to near-term decommission. When Product Hub goes live, the Savings Products Catalogue Query API will switch to Product Hub with no impact on any component above the domain API.
+      </td>
+      <td>SDH Team<br>Resilience: TBD</td>
+    </tr>
+
+    <tr>
+      <td class="item-no">24</td>
+      <td>
+        <div class="comp-name">AMS — UKBA</div>
+        <div class="comp-desc">Fixed rate savings products<br>[Container: DB2]</div>
+      </td>
+      <td><span class="tag reuse">RE-USE</span></td>
+      <td class="pos-maintain">MAINTAIN</td>
+      <td>
+        AMS-UKBA is the data store for fixed rate product data per ADR-CALC-001. No changes to the data store itself. Accessed via the new UKBA/AMS Product Enquiry sAPI (item 19). The new sAPI is a prerequisite.
+      </td>
+      <td>UKBA/AMS Team<br>Resilience: TBD</td>
+    </tr>
+
+    <tr>
+      <td class="item-no">25</td>
+      <td>
+        <div class="comp-name">ODS</div>
+        <div class="comp-desc">Customer operational data store<br>[Container: MongoDB — Customer ODS and UKBA ODS]</div>
+      </td>
+      <td><span class="tag reuse">RE-USE</span></td>
+      <td class="pos-maintain">MAINTAIN</td>
+      <td>
+        ODS is re-used as the read replica of the mainframe for customer account data in S3. Accessed via ODS sAPIs internally by the Current and Savings Accounts Holdings Query API. No changes required.
+      </td>
+      <td>ODS Team<br>Resilience: TBD</td>
+    </tr>
+
+    <tr>
+      <td class="item-no">26</td>
+      <td>
+        <div class="comp-name">PSOS</div>
+        <div class="comp-desc">VGDS Reference Data<br>[Container: Oracle Database]</div>
+      </td>
+      <td><span class="tag reuse">RE-USE</span></td>
+      <td class="pos-maintain">MAINTAIN</td>
+      <td>
+        PSOS is re-used internally by the Current and Savings Accounts Holdings Query API (item 17) for S3 to retrieve fixed rate product names (BND_NME from TUKBDPR table) for display in the Q5 held accounts section. No direct call from the calculator. No changes required.
+      </td>
+      <td>PSOS Team<br>Resilience: TBD</td>
+    </tr>
+
+    <tr>
+      <td class="item-no">27</td>
+      <td>
+        <div class="comp-name">AEM</div>
+        <div class="comp-desc">Adobe CMS<br>[Container: External Cloud]</div>
+      </td>
+      <td><span class="tag reuse">RE-USE</span></td>
+      <td class="pos-maintain">MAINTAIN</td>
+      <td>
+        AEM is re-used as the content store for all calculator static content. New content components must be authored (see item 15). The data store itself requires no changes.
+      </td>
+      <td>AEM Team<br>Resilience: TBD</td>
+    </tr>
+
+    <tr>
+      <td class="item-no">28</td>
+      <td>
+        <div class="comp-name">Mobile DB</div>
+        <div class="comp-desc">SDS Details<br>[Container: MongoDB]</div>
+      </td>
+      <td><span class="tag reuse">RE-USE</span></td>
+      <td class="pos-maintain">MAINTAIN</td>
+      <td>
+        Mobile DB is re-used for BApp session and reference data. No changes required for the calculator.
+      </td>
+      <td>Digital Core App<br>Resilience: TBD</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<br>
+<table>
+  <thead>
+    <tr>
+      <th colspan="2">Impact Summary Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><span class="tag new">NEW</span></td><td>5 components — .co.uk channel, React Web UI (.co.uk), Savings Calculator xAPI, Savings Products Catalogue Query API, New UKBA/AMS Product Enquiry sAPI</td></tr>
+    <tr><td><span class="tag amend">AMEND</span></td><td>3 components — React Web UI (ROLB), React Native UI (BApp), AEM (content authoring)</td></tr>
+    <tr><td><span class="tag reuse">RE-USE</span></td><td>20 components — no changes required</td></tr>
+    <tr><td><span class="tag remove">REMOVE</span></td><td>0 components</td></tr>
+  </tbody>
+</table>
+
+<br>
+<table style="border-left: 4px solid #c0392b;">
+  <thead><tr><th colspan="2" style="background:#c0392b;">Critical Dependencies and Blockers</th></tr></thead>
+  <tbody>
+    <tr>
+      <td style="width:40%; font-weight:bold; color:#c0392b;">New UKBA/AMS Product Enquiry sAPI</td>
+      <td>Does not exist. Must be built by the UKBA/AMS team. Hard blocker for fixed rate product display across all scenarios. Must be raised immediately.</td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; color:#E8A020;">Product Hub (future)</td>
+      <td>When Product Hub goes live, only the Savings Products Catalogue Query API changes its data source. No impact on xAPI or channel clients. A separate ADR will be raised at that point. ADR-CALC-001.</td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; color:#E8A020;">Q1 pre-population</td>
+      <td>Whether selecting a held account at Q5 auto-populates Q1 with the account balance is pending BA confirmation. This will impact calculation engine behaviour and client-side state management.</td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; color:#E8A020;">S2 existing API check</td>
+      <td>Check whether an existing API can serve the product detail GET endpoint for S2 before building a new one.</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<p style="font-size:10px; color:#aaa;">Savings Calculator HLD Impact Summary | Savings Programme | Draft | APM numbers and Resilience Categories to be confirmed | ADR-CALC-001</p>
+
+</body>
+</html>
