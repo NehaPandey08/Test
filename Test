@@ -1,8 +1,1 @@
-**Savings Calculator xAPI | INVEST | NEW**
 
-New Experience API for the Savings Calculator journey to be called by React Web UI and React Native UI across all channels, with the following endpoints:
-
-1. Retrieve full savings product catalogue with AER
-2. Retrieve savings product detail by product code
-3. Retrieve savings product details by list of product codes
-4. Retrieve customer held savings accounts and balances
