@@ -1,1 +1,20 @@
 
+Got it, here's a neutral version framed as things to weigh, not a decision already made:
+
+**Points to consider when deciding: additional row vs additional column**
+
+- **Row vs column approach:** Think through both options, add a new row for each direction (inbound/outbound), or add new columns to the same row for each direction. Look at what changes in the code for each: how do you insert, update, and read data in both cases?
+
+- **Database size angle:** One reason people prefer columns is to avoid duplicate rows and save space. But check how much data we're actually dealing with, are we talking thousands of rows or millions? If it's a small table, the space savings from avoiding "duplicate" rows probably doesn't matter much, so that shouldn't be a deciding factor on its own. Worth confirming this assumption rather than assuming it.
+
+- **Denormalization tradeoff:** Putting inbound and outbound as columns on the same row is a form of denormalizing the data (combining what could be separate records into one). Denormalization can be a valid choice when it makes reads faster or simpler, but it usually comes at the cost of flexibility. Weigh whether the read/performance benefit here is worth that cost, or if it isn't needed at our scale.
+
+- **Future format accommodation:** Imagine a new format or a new type of mapping gets added later. Ask: with the row approach, does that just mean inserting new data? With the column approach, does that mean changing the table structure (adding new columns)? Compare how much work each approach adds down the line.
+
+- **Independent seeding requirement:** We need seeding to work for just the inbound file, just the outbound file, or both together, independently. Check both designs against this, does one of them force you to update an existing row when seeding the second direction, versus just inserting fresh data? That affects how simple or coupled the seeding logic ends up being.
+
+- **Handling exceptions:** A few inbound/outbound cases are known to differ from each other, not perfect mirrors. Check how easy or hard it'd be to represent and query these exceptions under each design.
+
+- **Duplication itself:** Would the column approach actually eliminate duplication, or would it just shift the same data around in a different shape? Worth actually mapping this out with a small example rather than assuming either way.
+
+**Ask:** run through these points, come back with a recommendation and the reasoning, including any tradeoffs either way. If row-based and column-based end up close on most of these, that's useful to know too, call it out.
