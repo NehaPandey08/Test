@@ -1,44 +1,32 @@
-Review this PR end-to-end. Do not just skim the diff, reason about it against the actual codebase and the linked Jira ticket.
+Date: 20 July 2026
 
-1. JIRA REQUIREMENT MAPPING
-   - Find the Jira ticket ID referenced in the PR title, description, or branch name.
-   - If you have Jira access via MCP, fetch the ticket's acceptance criteria. If not, ask me to paste them.
-   - For each acceptance criterion, state whether this PR fully satisfies it, partially satisfies it, or doesn't address it at all.
-   - Flag any changes in the PR that are NOT explained by the ticket (scope creep, unrelated refactors, leftover debug code).
+Context: ModelHub, scrum meeting and follow-up conversation with Pavan (Tech Lead).
 
-2. CORRECTNESS & LOGIC
-   - Walk through each changed file and explain what changed and why.
-   - Identify logic errors, off-by-one issues, incorrect null/empty handling, and broken edge cases.
-   - For mapping/transformation logic (ISO 8583, ISO 20022, NCM/Nexo field mappings), verify field-level correctness: correct field tags, correct data types, correct optional/mandatory handling per the spec.
+What happened:
 
-3. UNUSED / DEAD CODE
-   - Flag any newly added methods, variables, imports, config entries, or DTO fields that are never referenced elsewhere in the changed or existing code.
-   - Flag any newly added dependencies that aren't actually used.
-   - Flag leftover commented-out code or TODOs without a ticket reference.
+1. In scrum, I and the scrum master Kamlesh questioned why a defect that had its description substantially changed by the product team (essentially becoming a different defect) before it was closed, was not raised as a new defect instead. Pavan explained a defect was raised, changes were made accordingly, and before it could be closed, the product team changed the entire description. I and Kamlesh decided to close the existing one as done and ask product to raise a new one going forward, so proper history of work is maintained and effort is counted correctly. Pavan did not agree, and raised that this particular case was from two months back. Kamlesh clarified we could apply this going forward even if it wasn't done that way so far.
 
-4. CORRECT FIELD / API USAGE
-   - Check that any new or modified fields match existing naming, typing, and validation conventions used elsewhere in ModelHub.
-   - Check for correct use of existing utility/helper methods instead of reimplementing logic that already exists in the codebase.
-   - Flag any hardcoded values that should be config-driven or enum-based.
+2. Later, while I was discussing something with two freshers (Shruti and Apurva), Pavan interrupted in a raised voice, saying "can we please do this first, you can do that later." I responded that I understood but was working on the other item.
 
-5. GOOD PRACTICES
-   - Error handling: are exceptions swallowed, logged, or propagated appropriately?
-   - Test coverage: are there tests for the new logic? Do existing tests still cover the changed behavior? Are there missing edge-case tests?
-   - Naming and readability against our CLAUDE.md conventions (if present).
-   - Security: input validation, injection risks, sensitive data (PANs, tokens) not logged in plaintext.
-   - Backward compatibility: could this break existing consumers of ModelHub's APIs/mappings?
+3. Pavan then asked to speak privately. We had an approximately hour-long conversation. Summary of his position:
+   - He felt I was excluding him by asking the freshers to come directly to me for any documentation changes from product.
+   - He wants to be part of every technical discussion, including defect classification changes.
+   - He said he felt "attacked" by me and Kamlesh over a Jira specification question.
+   - He said his interruption of my conversation with the freshers was a "repercussion" of me telling them to reach out to me.
+   - He stated I am not his manager, that Shrikant is, and that we are at the same level.
 
-6. REUSABILITY & DESIGN PATTERNS
-   - Identify any logic in this PR that is generic enough to be extracted into a reusable utility/service, rather than staying local to this use case. Explain what other ModelHub use cases (mapping generation, validation, other standards like ISO 8583/20022/NCM) could benefit from it.
-   - Scan the existing codebase for design patterns already in use (e.g. Strategy, Factory, Builder, Adapter, Chain of Responsibility, Template Method) and note whether this PR follows or breaks those established conventions.
-   - For any complex conditional logic, duplicated code, or tightly coupled classes in this PR, identify whether a design pattern would genuinely simplify it. Name the specific pattern and briefly explain how it would apply.
-   - For each pattern suggestion, give an honest cost/benefit call: is the current code simple enough that introducing a pattern would be over-engineering, or does the complexity/reuse potential justify it? State your recommendation explicitly, don't just list options.
-   - If a pattern is recommended, note whether it's a "fix now" (cheap, high value) or a "flag for later" (valid but out of scope for this PR).
+4. My response: as manager I am responsible for both technical delivery and team management, not just administrative approvals. I told him he would not be excluded, but that it is neither practical nor required for me to run every conversation by him or seek permission before telling the team to reach out to me directly.
 
-7. SUMMARY
-   - A short pass/fail-style verdict per Jira acceptance criterion.
-   - A prioritized list of issues (blocker / should-fix / nit).
-   - A short list of reusability/pattern recommendations, separated into "worth doing now" vs "worth a backlog ticket."
-   - Anything you're uncertain about that I should verify manually.
+5. Pavan raised multiple hypothetical scenarios where lack of involvement could go badly. I asked whether any of these had actually happened. He could not cite one. I noted that despite this, we were having the discussion anyway.
 
-Use `gh pr view 202 --comments` to check if a review was already posted before starting. Cite specific file paths and line numbers for every issue. 
+6. I told him my role is wider and my responsibilities are different from his. I am not interested in being his manager, I know he reports to Shrikant, and for that reason I have not asked him any managerial questions (timing, attendance, etc.). I stated clearly that as delivery manager for ModelHub, I will lead it and make decisions within my role, unapologetically.
+
+7. I asked him directly whether he would raise these same questions with Shrikant. He said "of course not."
+
+8. Pavan was not convinced by the end of the conversation.
+
+9. I informed Shrikant (manager to both of us) the same day. Shrikant agreed this was wrong and said he would speak to Pavan to clarify roles and responsibilities.
+
+10. I told Shrikant I am not holding this against Pavan, but if this pattern repeats, I will raise it formally.
+
+Kept for record in case of recurrence.
