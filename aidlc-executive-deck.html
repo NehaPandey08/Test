@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AIDLC — Executive Deck</title>
+<title>AIDLC Executive Deck</title>
 <style>
   :root{
     --ink:#141413;
@@ -42,7 +42,7 @@
     overflow:hidden;
   }
   .slide.active{display:flex}
-  /* type scale — driven by container via cqw-ish vw fallback */
+  /* type scale */
   .eyebrow{
     font-size:clamp(9px,1.05vw,14px);
     letter-spacing:.22em;
@@ -188,7 +188,7 @@
     <div class="eyebrow">Network Solutions · 2026</div>
     <h1>AI-Driven Development Life Cycle</h1>
     <div class="rule"></div>
-    <p class="title-tag">Turning AI from an ad-hoc productivity aid into a governed engineering discipline — safer, more predictable delivery at scale.</p>
+    <p class="title-tag">Turning AI from an ad-hoc productivity aid into a governed engineering discipline: safer, more predictable delivery at scale.</p>
     <div class="footer">
       <div class="mc-mark"><span class="mc-circles"><i></i><i></i></span></div>
       <span>© 2026 Mastercard. Proprietary and Confidential.</span>
@@ -202,7 +202,7 @@
     <div class="cols">
       <div class="col-card">
         <h3>Ungoverned AI use</h3>
-        <p>Engineers are already using AI to write, review, and ship code. Without guardrails, each engineer applies their own standards — or none at all.</p>
+        <p>Engineers are already using AI to write, review, and ship code. Without guardrails, each engineer applies their own standards, or none at all.</p>
       </div>
       <div class="col-card">
         <h3>Hidden risk surface</h3>
@@ -224,11 +224,11 @@
   <section class="slide">
     <div class="eyebrow">What AIDLC is</div>
     <h2>A governed pipeline wrapped around existing AI tooling</h2>
-    <p class="lede">Not a new tool — an operating model. Every Jira ticket, defect or story, follows a defined, auditable path from intake to PR. The AI cannot skip a phase, bypass a gate, or proceed without required artifacts. The engineer stays in control; the process enforces the standards.</p>
+    <p class="lede">Not a new tool. An operating model. Every Jira ticket, defect or story, follows a defined, auditable path from intake to PR. The AI cannot skip a phase, bypass a gate, or proceed without required artifacts. The engineer stays in control; the process enforces the standards.</p>
     <div class="four-grid">
       <div class="pillar">
         <span class="tick">1</span>
-        <div><h3>Consistent standards</h3><p>Every AI session follows the same rules — security, logging, error handling, testing — regardless of engineer experience level.</p></div>
+        <div><h3>Consistent standards</h3><p>Every AI session follows the same rules for security, logging, error handling, and testing, regardless of engineer experience level.</p></div>
       </div>
       <div class="pillar">
         <span class="tick">2</span>
@@ -240,7 +240,7 @@
       </div>
       <div class="pillar">
         <span class="tick">4</span>
-        <div><h3>Built on MA principles</h3><p>Security, UX, operability, and interoperability requirements are enforced automatically — not left to individual discretion.</p></div>
+        <div><h3>Built on MA principles</h3><p>Security, UX, operability, and interoperability requirements are enforced automatically, not left to individual discretion.</p></div>
       </div>
     </div>
     <div class="footer">
@@ -252,7 +252,7 @@
   <!-- SLIDE 4 : PIPELINE -->
   <section class="slide">
     <div class="eyebrow">How work flows</div>
-    <h2>The 7-phase pipeline — a control at every step</h2>
+    <h2>The 7-phase pipeline: a control at every step</h2>
     <div class="phase-row">
       <div class="phase"><span class="num">0</span><h4>Routing</h4><p>Classify ticket type.</p><div class="gate">Wrong path is blocked.</div></div>
       <div class="phase"><span class="num">1</span><h4>Analysis</h4><p>Confirm scope and impacted components.</p><div class="gate">Boundaries defined.</div></div>
@@ -264,11 +264,11 @@
     </div>
     <div class="paths">
       <div class="path defect">
-        <h4>Defect path — rootcause.md first</h4>
+        <h4>Defect path: rootcause.md first</h4>
         <p>Collect evidence → investigate code + Git history → produce <b>rootcause.md</b> → <b>human approval</b> before implementation.</p>
       </div>
       <div class="path story">
-        <h4>Story path — roadmap.md first</h4>
+        <h4>Story path: roadmap.md first</h4>
         <p>Capture requirements → assess architecture fit → produce <b>roadmap.md</b> → <b>human approval</b> before critical changes proceed.</p>
       </div>
     </div>
@@ -285,19 +285,19 @@
     <div class="built-list">
       <div class="built-item">
         <h3>Agent operating model</h3>
-        <p>Defines how the agent thinks and acts — confidence thresholds, escalation triggers, and execution boundaries. A decision framework, not a prompt.</p>
+        <p>Defines how the agent thinks and acts: confidence thresholds, escalation triggers, and execution boundaries. A decision framework, not a prompt.</p>
       </div>
       <div class="built-item">
         <h3>Hooks</h3>
-        <p>Automated triggers at every phase transition. Hooks make the pipeline non-skippable — gates fire whether or not anyone remembers them.</p>
+        <p>Automated triggers at every phase transition. Hooks make the pipeline non-skippable. Gates fire whether or not anyone remembers them.</p>
       </div>
       <div class="built-item">
         <h3>Business knowledge</h3>
-        <p>Domain context baked in: the agent understands the COB service — its architecture, exception scenarios, and production support procedures.</p>
+        <p>Domain context baked in: the agent understands the COB service: its architecture, exception scenarios, and production support procedures.</p>
       </div>
       <div class="built-item">
         <h3>Standards</h3>
-        <p>MA engineering standards encoded as machine-readable rules the agent applies automatically — security, testing, logging, error handling.</p>
+        <p>MA engineering standards encoded as machine-readable rules the agent applies automatically: security, testing, logging, error handling.</p>
       </div>
     </div>
     <p class="appendix-note">Technical detail on each component is available in the appendix.</p>
@@ -310,7 +310,7 @@
   <!-- SLIDE 6 : STATUS -->
   <section class="slide">
     <div class="eyebrow">Where we are today</div>
-    <h2>Live on Clear on Behalf — measuring before claiming</h2>
+    <h2>Live on Clear on Behalf: measuring before claiming</h2>
     <div class="status-grid">
       <div class="status-item">
         <span class="badge done">Done</span>
@@ -326,10 +326,10 @@
       </div>
       <div class="status-item">
         <span class="badge notyet">Not yet</span>
-        <div><h3>End-to-end automation</h3><p>Current state is semi-automated. Full Jira-to-PR automation is planned for October 2026 — not in scope today.</p></div>
+        <div><h3>End-to-end automation</h3><p>Current state is semi-automated. Full Jira-to-PR automation is planned for October 2026 and is not in scope today.</p></div>
       </div>
     </div>
-    <div class="closing-line">Measurement is built into the pipeline from day one — gate compliance and cycle time are captured automatically. August is when the data matures, not when we start looking for it.</div>
+    <div class="closing-line">Measurement is built into the pipeline from day one: gate compliance and cycle time are captured automatically. August is when the data matures, not when we start looking for it.</div>
     <div class="footer">
       <div class="mc-mark"><span class="mc-circles"><i></i><i></i></span></div>
       <span>© 2026 Mastercard. Proprietary and Confidential.</span>
