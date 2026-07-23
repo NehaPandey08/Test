@@ -1,1 +1,18 @@
+Hi Ankit,
 
+Aligned on priorities: RTC and MAE 100% in ITF with CRUD as P1, NCM/uNCM with CRUD as P2. That is exactly the sequence we are planning against, and the release plan we're working on will reflect it.
+
+Two clarifications so we are working from the same facts.
+
+No process change has taken place so far. 
+
+Paavan's email documents decisions from a call so the team can build against them without repeat discussions. Writing down what was agreed is not new process, it is how we avoid losing another round of rework to memory.
+
+The timeline moved from 31 July to 15 September before I joined on 2 July. The team briefed me on this in my first week. Nothing we have introduced since caused that slippage, and nothing we are doing now adds to it. The asks so far, refined stories ready before pickup, defects from missing requirements classified as requirement gaps, and a clear priority queue, exist to stop further slippage, not to create it.
+
+On concrete delivery: the release plan lands by early next week
+
+Happy to take the rest during the one to one scheduled for today.
+
+Regards,
+Neha
