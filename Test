@@ -1,10 +1,1 @@
-Paavan, yes, create a Confluence page under the ModelHub space. Scope it as the full release and rollback plan for the first ITF batch, owned end to end by you:
-
-1. Scope of the batch: what deploys at this iteration's cutoff (seeding, DB schema, CSV changes, scheduler), and what follows in the next batch (9 SP high-priority defects).
-2. Deployment sequence: ordered steps including DB migration, seeding execution, service deployment, and config changes, with owner and estimated duration per step.
-3. Verification: post-deployment checks that confirm the batch landed correctly before we hand over to product for ITF testing.
-4. Rollback: per step, what the reversal path is, especially for schema and seeded data where a clean break may not be possible. Where rollback is not feasible, state that and give the mitigation.
-5. Known defects list going in with the batch, so ITF testing does not re-report them.
-6. Dependencies and risks: the 3 defects pending discussion with Jaya/Utkarsha, and anything else that could move the date.
-
-Draft by Friday EOD so we can refine before the Monday review. Pull in Ankit's team for anything you need from their side, and flag blockers to me directly, not in the review.
+since this is our first ITF release with a dedicated release plan, would appreciate your inputs on MC release governance requirements worth building in: change approval, deployment windows, rollback sign-off, or anything else expected. For now we're going with the PLL template, skipping sections we don't need, so we align to a standard the org uses. We can cover it during Monday's review
