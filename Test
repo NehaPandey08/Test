@@ -1,1 +1,1 @@
-since this is our first ITF release with a dedicated release plan, would appreciate your inputs on MC release governance requirements worth building in: change approval, deployment windows, rollback sign-off, or anything else expected. For now we're going with the PLL template, skipping sections we don't need, so we align to a standard the org uses. We can cover it during Monday's review
+
