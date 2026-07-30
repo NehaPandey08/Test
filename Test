@@ -1,11 +1,1 @@
-Paavan,
-
-Aman has assigned the story to me because he wouldn't do assignment for our team. I had already shared AI generated wireframes. Based on my use of AI, Aman also shared his wireframes with updated requirements. The wireframes he's shared are not a full set. However, using them as a reference combined with the story, it should be pretty simple to come up with the remaining wireframes.
-
-The confusion is in the terminology. Wireframes are meant to be static, low fidelity work, done using tools like Figma or even AI generated mockups. Modifying actual code or APIs to show how data will look isn't wireframing, it's a working prototype, and that isn't needed for a project already in flight. Static wireframes suffice.
-
-My earlier direction to use AI to divide and finish the remaining work for wireframes stands as is.
-
-We will not be prototyping at this stage. Once wireframes are finalized, we implement directly in code.
-
-Let's connect tomorrow morning as planned and align on this before assigning story points.
+SELECT DICT_ID, DICT_NAM, MC_NAM FROM DICT_ELMT WHERE DICT_NAM = 'Additional Data',
