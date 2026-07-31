@@ -1,1 +1,12 @@
-SELECT DICT_ID, DICT_NAM, MC_NAM FROM DICT_ELMT WHERE DICT_NAM = 'Additional Data',
+Hi [TPM name],
+
+Thanks for sending this over. A couple of things we discussed on the call don't seem to have made it into the list below, wanted to flag them so the JD is accurate:
+
+- MCP (Model Context Protocol) server integration, agent skills and plugin architecture. We talked about this specifically as part of the automation and agent tooling requirement.
+- Claude Code, called out on the call as current Mastercard direction alongside GitHub Copilot. Right now the email only references OpenAI/Azure OpenAI and LangChain/LangGraph.
+- Hands on Java depth as a hard filter, not just prompt level AI usage. This was one of the main points discussed, we specifically don't want candidates who lean on LLMs without the ability to catch their mistakes.
+
+Could you add these in before this goes out further? Happy to jump on a quick call if easier.
+
+Thanks,
+Neha
