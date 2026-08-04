@@ -1,12 +1,19 @@
-Hi [TPM name],
+**1:1 Notes – [Date] – Shrikant & Neha**
 
-Thanks for sending this over. A couple of things we discussed on the call don't seem to have made it into the list below, wanted to flag them so the JD is accurate:
+**Action Items:**
 
-- MCP (Model Context Protocol) server integration, agent skills and plugin architecture. We talked about this specifically as part of the automation and agent tooling requirement.
-- Claude Code, called out on the call as current Mastercard direction alongside GitHub Copilot. Right now the email only references OpenAI/Azure OpenAI and LangChain/LangGraph.
-- Hands on Java depth as a hard filter, not just prompt level AI usage. This was one of the main points discussed, we specifically don't want candidates who lean on LLMs without the ability to catch their mistakes.
+1. **Full ownership** – Analysis must surface gaps (e.g., missed APIs, schema impacts) upfront, not after the story is underway. Any gaps identified mid-story to be raised proactively and immediately, not discovered through follow-up.
 
-Could you add these in before this goes out further? Happy to jump on a quick call if easier.
+2. **Committed timelines** – All story commitments require a specific date, not an open-ended "will try." Applies immediately given the mid-August release push.
 
-Thanks,
-Neha
+3. **Story point accuracy** – Estimates should reflect actual complexity. Where padding is suspected going forward, actuals will be reviewed against estimates (team-wide practice, not isolated to this instance).
+
+4. **Raising concerns** – Any concerns about process, delivery approach, or team setup to be raised directly with Neha, not with other stakeholders.
+
+**Shrikant's commitment:** He stated these improvements will be visible within a month.
+
+**Discussed:**
+
+Raised the concern reported by Ankit regarding process changes (set up by Neha) allegedly causing delivery delays. Shrikant confirmed no process change has, in fact, impacted his work or caused any delay.
+
+Want me to also note the three view stories' Friday commitment and the leave decision status, so this doc is a complete record of the conversation?
