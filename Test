@@ -1,7 +1,17 @@
 
 
-Lokesh showed good depth in distributed systems however he lacks sufficient depth in core Java and code-level knowledge.
+**From Ganesh (Tapi):**
 
-We're looking for candidates who can use AI tools effectively while relying on their own knowledge to catch what the AI misses.
+- Share the Maveric repo PR URL for AIDLC once it's merged (targeting this week)
 
-We will not be moving forward with Lokesh's candidature for now.
+- Establish weekly sync between Tapi and COB teams to align on AI adoption across products; jointly present updates to Sanjay
+
+- Include Ganesh in Smita's PMT agent and CL4A mapping calls — he's coordinating mapping automation for Tapi and needs a unified approach
+
+- Provide ModelHub documentation and clarity on how it relates to AIDLC — Ganesh is proposing NCM/UNM mapping automation via agent and needs to understand if ModelHub is the vehicle
+
+**Timeline implications:**
+
+- Internal knowledge indexing sync (this week with you, Krishna, others)
+- Smita sync on mapping requirements (needs to include Ganesh)
+- Weekly cadence starts immediately to prevent misalignment across teams
