@@ -1,17 +1,21 @@
 
 
-**From Ganesh (Tapi):**
+Hi Krushna,
 
-- Share the Maveric repo PR URL for AIDLC once it's merged (targeting this week)
+As discussed in our sync, here are the two action items I'd like you to take back:
 
-- Establish weekly sync between Tapi and COB teams to align on AI adoption across products; jointly present updates to Sanjay
+1. Create a Confluence running log for AIDLC feedback
+   - Document all feedback received (from me, you, COB, Excalibur, anyone)
+   - Capture: what the feedback is, why it's coming in, what's driving it, and current status
+   - Status options: implemented, pending, not implemented (with reason)
+   - This creates a clear record of change drivers and prevents suggestions from getting lost
+   - Example: plugin architecture feedback came in because we needed to avoid spinning up AIDLC every time someone wants to add a report
 
-- Include Ganesh in Smita's PMT agent and CL4A mapping calls — he's coordinating mapping automation for Tapi and needs a unified approach
+2. Schedule the AI session (~30 min max)
+   - This has been pending for a while and we need to get it done
+   - Let me know your availability this week or next
 
-- Provide ModelHub documentation and clarity on how it relates to AIDLC — Ganesh is proposing NCM/UNM mapping automation via agent and needs to understand if ModelHub is the vehicle
+On the plugin approach—great work addressing both the plugin feedback and the modular skills feedback already. The ability for teams to invoke peer review, Jira analysis, or requirement analysis independently (and compose them in their own sequence) is exactly what will lower the adoption barrier.
 
-**Timeline implications:**
+I'll keep sharing feedback in our syncs and 1-1s. Anytime you need input or support on AIDLC or anything else, reach out—don't wait for the scheduled 1-1.
 
-- Internal knowledge indexing sync (this week with you, Krishna, others)
-- Smita sync on mapping requirements (needs to include Ganesh)
-- Weekly cadence starts immediately to prevent misalignment across teams
