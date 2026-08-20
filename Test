@@ -2,14 +2,8 @@
 
 Hi Product Team,
 
-I'm writing to confirm that the ModelHub dev deployment (UI, DB, and services) has completed successfully.
+ModelHub deployment to ITF has completed successfully.
 
-Next Steps:
-Please proceed with a round of testing against the dev environment and validate that the scope outlined on the attached release page is functioning as expected. Once testing is complete, please provide sign-off from the product team on this release scope.
+Please proceed with your testing in the ITF environment. If any issues are encountered during testing, please report them promptly so we can address them.
 
-We will initiate the ITF deployment once we receive your sign-off.
-
-Please let me know if you have any blockers or need clarification on the scope. Looking forward to your confirmation.
-
-Thanks,
-Neha
+Please let us know once testing is complete and provide your sign-off or if any blockers have been identified.
