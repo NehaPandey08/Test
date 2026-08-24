@@ -1,4 +1,34 @@
+Here's your email polished and ready:
 
+---
+
+**Subject:** Follow-up: 1:1 Summary & Action Items
+
+Hi Apurva,
+
+Please find below the summary of our discussion and action items from today's 1:1.
+
+I acknowledge the last few weeks have been extremely full workwise. Given that ModelHub is on a strict timeline with a lot of features coming in, we will be seeing a few intense weeks ahead while the process we're setting up takes shape. The team's efforts are well noted.
+
+**Action Items:**
+
+- As a developer, coding and analysis skills are your only constant. Coding agents are to increase efficiency, not replace your own logical reasoning or implementation.
+
+- No surface-level analysis. Do 360° before every change to understand the full blast radius so we're not fixing the same issues in different files or operations for weeks.
+
+- Own your solutions. Come to meetings with analysis and proposed fixes.
+
+- Be open to suggestions and solutions suggesting better practices and hygiene. Resistance needs to be replaced with well-analyzed logical reasons for things already in place or are proposed.
+
+- Discuss your solutions with Pawan or me—your call. But own whatever you decide.
+
+Looking forward to seeing these shifts.
+
+—Neha
+
+---
+
+Ready to send?
 
 Apurva, I want to talk about something I've been observing that I think is an opportunity for you to level up as a developer.
 
@@ -25,3 +55,24 @@ AI is an efficiency tool. It's not a replacement for your judgment. The goal is 
 Focus on sharpening your own skillset. Ask yourself: Why does this work this way? What breaks if I change this? What's the long-term cost? Those are the questions that separate junior from senior developers.
 
 I want to see you get better at this. How do you feel about this feedback?
+
+
+
+
+
+Hi Sanket,
+
+Please find below the summary of our discussion today and the assigned action items.
+
+You're strong on delivery and pace. The challenge I'm noticing is that external blockers (team dependencies, gRPC timelines) are affecting your confidence in the work itself. The two aren't the same thing. When delivery stalls due to external factors, that's not a measure of your actual output.
+
+**Action Items**
+
+1. Start Friday sessions with Krushna on AI work. This is structured engagement where you can learn together and will help drive the team engagement that you noted as lagging.
+
+2. As we discussed on the growth path, your output and delivery is proven. The other important skill that will matter most is how you bring people along with you. Acknowledging that different people have different paces will help better collaboration.
+
+3. If you want the AI (R&D) work to accompany some deliverables, we can manage that. Reach out when you feel you have bandwidth available.
+
+Best,
+Neha
