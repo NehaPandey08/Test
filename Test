@@ -1,9 +1,27 @@
 
 
-Hi Product Team,
+Apurva, I want to talk about something I've been observing that I think is an opportunity for you to level up as a developer.
 
-ModelHub deployment to ITF has completed successfully.
+I've noticed a pattern in how we're handling issues and I want to be direct about it, because I think you have the potential to grow here.
 
-Please proceed with your testing in the ITF environment. If any issues are encountered during testing, please report them promptly so we can address them.
+**The Pattern I'm Seeing:**
 
-Please let us know once testing is complete and provide your sign-off or if any blockers have been identified.
+1. **Analysis stays surface-level.** When an issue comes up, we tend to fix the immediate symptom without doing a full 360 analysis. Then another issue pops up elsewhere. It feels like whack-a-mole. Example: the modeler profile change — we caught issues late in dev-to-ITF handoff that should have been caught earlier.
+
+2. **Resistance to practices that matter.** When we talk about good practices — code hygiene, long-term durability, thinking through overall impact — there's pushback. The pushback usually sounds like "this would be easier, and it achieves the same thing." But easier now often costs us later. And it's not just about code — it's about how you think.
+
+3. **Using things without understanding them.** I've seen instances where we implement something, it breaks, and then we realize we didn't actually understand why we were using it in the first place. Or problem statements come up without any proposed solutions attached.
+
+**What This Means:**
+
+As developers, we're paid to think. Critical thinking — analyzing root cause, understanding tradeoffs, proposing solutions — that's the skill that makes you valuable long-term.
+
+**On AI Tools:**
+
+AI is an efficiency tool. It's not a replacement for your judgment. The goal is fewer defects, better decisions faster. But that means when you're reviewing AI-generated code, you need to catch the bugs *before* deployment, not after. That's where your skill shows. And honestly, the number of defects we ship reflects how well we're analyzing problems. That's a clear marker of skill development.
+
+**My Ask:**
+
+Focus on sharpening your own skillset. Ask yourself: Why does this work this way? What breaks if I change this? What's the long-term cost? Those are the questions that separate junior from senior developers.
+
+I want to see you get better at this. How do you feel about this feedback?
