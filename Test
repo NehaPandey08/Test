@@ -1,78 +1,12 @@
-Here's your email polished and ready:
+Hi Shrikant J,
 
----
+I won't be able to join this call.
 
-**Subject:** Follow-up: 1:1 Summary & Action Items
+The scripts are idempotent, and individually rollback-able for both data and structure. If there's a specific technical concern after reviewing them, please raise it in writing and I'll address it.
 
-Hi Apurva,
+Given that this fix was required because it had been committed to the product team, not delivered, and I was not informed the commitment existed until product raised it directly, I stepped in to save bandwidth and made the changes myself.
 
-Please find below the summary of our discussion and action items from today's 1:1.
+Go through the scripts and identify any concerns on your own. If a walkthrough is genuinely needed, I'd like that request in writing, specifying which part of the code is unclear or difficult to understand, and what concerns if any exist, along with the documented PR review guidelines being followed, both the Mastercard-wide standard and anything specific to ModelHub.
 
-I acknowledge the last few weeks have been extremely full workwise. Given that ModelHub is on a strict timeline with a lot of features coming in, we will be seeing a few intense weeks ahead while the process we're setting up takes shape. The team's efforts are well noted.
-
-**Action Items:**
-
-- As a developer, coding and analysis skills are your only constant. Coding agents are to increase efficiency, not replace your own logical reasoning or implementation.
-
-- No surface-level analysis. Do 360° before every change to understand the full blast radius so we're not fixing the same issues in different files or operations for weeks.
-
-- Own your solutions. Come to meetings with analysis and proposed fixes.
-
-- Be open to suggestions and solutions suggesting better practices and hygiene. Resistance needs to be replaced with well-analyzed logical reasons for things already in place or are proposed.
-
-- Discuss your solutions with Pawan or me—your call. But own whatever you decide.
-
-Looking forward to seeing these shifts.
-
-—Neha
-
----
-
-Ready to send?
-
-Apurva, I want to talk about something I've been observing that I think is an opportunity for you to level up as a developer.
-
-I've noticed a pattern in how we're handling issues and I want to be direct about it, because I think you have the potential to grow here.
-
-**The Pattern I'm Seeing:**
-
-1. **Analysis stays surface-level.** When an issue comes up, we tend to fix the immediate symptom without doing a full 360 analysis. Then another issue pops up elsewhere. It feels like whack-a-mole. Example: the modeler profile change — we caught issues late in dev-to-ITF handoff that should have been caught earlier.
-
-2. **Resistance to practices that matter.** When we talk about good practices — code hygiene, long-term durability, thinking through overall impact — there's pushback. The pushback usually sounds like "this would be easier, and it achieves the same thing." But easier now often costs us later. And it's not just about code — it's about how you think.
-
-3. **Using things without understanding them.** I've seen instances where we implement something, it breaks, and then we realize we didn't actually understand why we were using it in the first place. Or problem statements come up without any proposed solutions attached.
-
-**What This Means:**
-
-As developers, we're paid to think. Critical thinking — analyzing root cause, understanding tradeoffs, proposing solutions — that's the skill that makes you valuable long-term.
-
-**On AI Tools:**
-
-AI is an efficiency tool. It's not a replacement for your judgment. The goal is fewer defects, better decisions faster. But that means when you're reviewing AI-generated code, you need to catch the bugs *before* deployment, not after. That's where your skill shows. And honestly, the number of defects we ship reflects how well we're analyzing problems. That's a clear marker of skill development.
-
-**My Ask:**
-
-Focus on sharpening your own skillset. Ask yourself: Why does this work this way? What breaks if I change this? What's the long-term cost? Those are the questions that separate junior from senior developers.
-
-I want to see you get better at this. How do you feel about this feedback?
-
-
-
-
-
-Hi Sanket,
-
-Please find below the summary of our discussion today and the assigned action items.
-
-You're strong on delivery and pace. The challenge I'm noticing is that external blockers (team dependencies, gRPC timelines) are affecting your confidence in the work itself. The two aren't the same thing. When delivery stalls due to external factors, that's not a measure of your actual output.
-
-**Action Items**
-
-1. Start Friday sessions with Krushna on AI work. This is structured engagement where you can learn together and will help drive the team engagement that you noted as lagging.
-
-2. As we discussed on the growth path, your output and delivery is proven. The other important skill that will matter most is how you bring people along with you. Acknowledging that different people have different paces will help better collaboration.
-
-3. If you want the AI (R&D) work to accompany some deliverables, we can manage that. Reach out when you feel you have bandwidth available.
-
-Best,
+Thanks,
 Neha
