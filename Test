@@ -1,12 +1,7 @@
-Hi Shrikant J,
+Hi Paavan,
 
-I won't be able to join this call.
+I noticed that you are on leave today, and I had not received any prior intimation from you.
 
-The scripts are idempotent, and individually rollback-able for both data and structure. If there's a specific technical concern after reviewing them, please raise it in writing and I'll address it.
+Given that you work with me on a day-to-day basis for ModelHub, particularly in the context of the ongoing release activities and open items currently in progress, I need visibility of any absences as the Manager to ensure appropriate coordination and continuity of work.
 
-Given that this fix was required because it had been committed to the product team, not delivered, and I was not informed the commitment existed until product raised it directly, I stepped in to save bandwidth and made the changes myself.
-
-Go through the scripts and identify any concerns on your own. If a walkthrough is genuinely needed, I'd like that request in writing, specifying which part of the code is unclear or difficult to understand, and what concerns if any exist, along with the documented PR review guidelines being followed, both the Mastercard-wide standard and anything specific to ModelHub.
-
-Thanks,
-Neha
+Going forward, please ensure that you give me a heads-up whenever you are taking leave or will be unavailable.
