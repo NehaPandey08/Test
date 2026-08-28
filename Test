@@ -1,7 +1,8 @@
-Hi Paavan,
+Hi Shrikant,
 
-I noticed that you are on leave today, and I had not received any prior intimation from you.
+Thanks for the context. On the DB script specifically, this is precisely what I was asking for. If the team was able to reach this conclusion, that a DB-level trigger wasn't necessary and the existing code-level guard suffices, that discussion did not require a call. Any concern should have been raised in writing, as I'd asked, and resolved on that basis.
 
-Given that you work with me on a day-to-day basis for ModelHub, particularly in the context of the ongoing release activities and open items currently in progress, I need visibility of any absences as the Manager to ensure appropriate coordination and continuity of work.
+Declining to approve a PR because a walkthrough is wanted, rather than raising a specific written concern after review, delays the very bandwidth someone else stepped in to save on the team's behalf.
 
-Going forward, please ensure that you give me a heads-up whenever you are taking leave or will be unavailable.
+Happy to discuss the other two items (new mapping without dictionary, and enum mapping CRUD) separately, they're distinct pieces of work and deserve their own conversations rather than being folded into a review discussion on an unrelated script.
+
