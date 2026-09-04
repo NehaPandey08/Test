@@ -1,16 +1,70 @@
+shruti
+**Conduct & Communication**
+
+Never raise your voice
+
+Do your homework before every room. List points, know backing facts, anticipate questions
+
+Speak with clarity and facts. If unsure, say "I don't know, let me research and get back"
+
+**Critical Thinking & Technical Work**
+
+Think through problems critically before asking for help or using AI
+
+Analyze every problem as your problem, not "someone else's task"
+
+Build your own thoughts. Don't just follow what others suggest. Critical thinking is a must for a developer
+
+Aim for quality in your work. Aim to avoid defects
+
+**Learning & Growth**
+
+Replace resistance to change and different suggestions with research and data on why one approach might be suggested over others
+
+Avoid waiting for perfect clarity before acting
+
+Try things even without full understanding
+
+**Transition**
+
+Attend COB PI planning as observer (learn, don't lead yet)
+
+Deliver current work through mid-September and manage overlap
+
+
+sahil
+
+**Sankit's Action Items:**
+
+1. **Follow through on commitments**—deliver the development plan. If you can't, say so upfront. No more delays.
+
+2. **Contribute to every story in PI planning**—requirements, estimation, design discussions. This isn't optional.
+
+3. **Don't self-censor over team friction**—if you see a problem or have feedback, speak up. Don't step back to avoid conflict.
+
+4. **Flag concerns regardless of ownership**—every story is shared. Your input matters even if it's not assigned to you.
+
+
+shrikant 
 Hi Shrikant,
 
-Please find attached a table listing several breaches of conduct and policy, mapped against Mastercard's Way behaviors, over the last two months.
+Please find below the discussed notes and action items from today's 1:1.
 
-As we discussed on 20th July, the first breach of this kind was raised with you then. I chose not to pursue it officially at the time, as I wanted to give Pavan the time and space to grow accustomed to the changed structure of the team.
+**Ownership**
+- Clear, sustained improvement in ownership since last 1:1. Keep up the good work.
+- Continue owning your part fully. If scope is unclear (yours or not), raise it and I'll help clarify.
 
-In the six weeks since that first incident, there have been a total of 29 such incidents. I have not seen improvement, if anything, I've observed consistent resistance on his part and repeated breaches of conduct, creating an unprofessional and, at times, unnecessarily hostile environment within the team.
+**Deployment**
+- Deployment issues (bigserial, updated_at conversion) noted. While some root causes predate this delivery (postgres version flagged earlier, not actioned), learn from it. Going forward, ensure more rigor on code correctness, including AI assisted code.
+- Move toward earlier or rolling PR reviews to reduce late cycle merge conflicts.
+- Come with problem plus proposed solution plus rationale, not just a problem statement. Applies to all discussions, walkthroughs included.
+- No tolerance for unnecessary animosity between team members. Own your part, but work with the team.
+- Increase technical engagement with the team directly.
 
-He has also consistently delayed delivery, taken on more scope than he completes, and been unable to justify the work when pressed. Story points on tasks are repeatedly added and the work is subsequently delayed. Several commitments have been made to the product team without being conveyed to me, and I have had to make up for these, either by delivering the changes myself or by working with product to move items out of scope.
+**Status check**
+- No current concerns raised on either side, team or individual.
 
-This is not conducive to a professional or healthy working environment, and it is affecting the wider team. One team member also reached out to me on Friday to say they were having trouble getting details from Pavan.
-
-I'd like to discuss this with you directly. If this pattern continues, I may need to involve official HR channels.
+Let me know if I've missed anything.
 
 Thanks,
 Neha
