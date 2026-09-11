@@ -1,102 +1,44 @@
-
-
 **INTERVIEW EVALUATION - L9 CANDIDATE**
 
-**Interviewer:** Neha Pandey  
-**Candidate:** Daniel Vincent  
-**Role:** L9 Junior Technical SME
+**Candidate:** Corey | **Role:** L9 Junior Technical SME (Java)
 
 ---
 
 **TECHNICAL SKILLS**
 
-☐ No evidence: Does not exhibit sufficient technical skills  
-☑ **Partially meets the bar:** Exhibits some technical skills but maybe not at level candidate has applied for  
-☐ Meets the bar (threshold for this role): Exhibits sufficient technical skills for role  
-☐ Exceeds the bar: Demonstrates above and beyond performance and capability
+☑ **No evidence: Does not exhibit sufficient technical skills**
 
-**Reasoning of technical score, please explain with details:**
-
-Daniel demonstrates solid problem-solving logic (coding challenge well-executed, self-corrected type conversion bug). However, **core concern: Java is the required language for this role. Candidate explicitly requested to code in Python instead, indicating discomfort with Java.** While problem-solving ability is strong, the primary tech stack competency is questionable for a Java-heavy payments platform. This is rampable with 3-4 months of intensive mentorship but should be flagged as a gap. Other skills (CI/CD concepts, testing, RBAC implementation) are adequate for L9.
+Corey failed to understand basic 24-hour time validation (0-23 hours, 0-59 minutes) even with multiple prompts. When given edge cases (minute=25, hour=25), he couldn't identify why they're invalid without explanation. Logic gaps and Java weakness compounded each other—he couldn't problem-solve independently or complete the challenge. For L9, candidates must validate requirements and code straightforward solutions with minimal guidance. Corey did neither.
 
 ---
 
 **MASTERCARD WAY BEHAVIORAL SKILLS**
 
-☐ Developing Behavior: Demonstrated some (or none) of the expectations outlined for this Mastercard Way  
-☑ **Strong Behavior:** Demonstrated most/all of the expectations outlined for this Mastercard Way Behavior  
-☐ Exemplary Behavior: Demonstrated above & beyond expectations outlined for this Mastercard Way Behavior and created impact for stakeholders/business
+☑ **Strong Behavior**
 
-**Reasoning of behavioral score, please explain with details:**
-
-Daniel demonstrates strong cultural alignment: coachability (absorbed mentorship on AI limitations without defensiveness), humility (Dunning-Kruger awareness), growth mindset (committed to continuous learning), and collaboration (client-focused, iterative feedback). He asked clarifying questions and showed accountability for past mistakes. However, downgraded from Exemplary because requesting to deviate from core language requirement signals lack of confidence in required tech stack, not flexibility—this slightly undermines the "exemplary" bar for a technical role.
+Corey demonstrates strong behavioral fit: admitted gaps without defensiveness, owned 100% of capstone mistake, showed customer empathy on nonprofit project (simplified over-engineered solution), accepted feedback readily, and proactively collaborated with peers. No ego, no blame-shifting. Excellent culture alignment.
 
 ---
 
 **OVERALL DECISION**
 
-☑ **Yes:** This person's skills, capabilities, and experience would be a value add to Mastercard.  
-☐ No
-
-**Hire Recommendation**
-
-☑ **Yes:** I recommend and support hiring this candidate for this role and level.  
-☐ No
+☑ **No: Technical skills do not meet the bar for L9 role.**
 
 ---
 
-**WHAT IS EXCEPTIONAL ABOUT THIS CANDIDATE?**
+**EXTENSIVE NOTES**
 
-☐ Technical skills  
-☐ Past experiences  
-☑ **Behavioral skills**  
-☐ Industry knowledge  
-☑ **Other:** Problem-solving rigor and self-correction ability
+**Decision: NO HIRE**
 
-**Details:** Daniel's standout qualities are behavioral fit (coachability, humility, growth mindset) and methodical problem-solving approach (tests solutions, catches own bugs). Cultural alignment is exceptional. Technical depth is solid but not exceptional; Java proficiency is a gap.
+Strong behavior doesn't offset critical technical gap. L9 requires independent problem-solving on basic requirements—Corey couldn't validate time constraints or complete a simple coding challenge even with prompting. Logic gaps (not just syntax) suggest fundamental understanding issues. For payment systems, this is disqualifying. Recommend: Corey invest 6-12 months in structured learning before applying to tier-1 companies. Strong culture fit means he could grow elsewhere with patience; Mastercard needs immediate technical capability.
 
----
 
-**EXTENSIVE NOTES TO EXPLAIN HIRING DECISION**
 
-**Why Hire (Conditionally):**
 
-Daniel Vincent is a **conditional YES for L9** with a clear caveat on Java ramp-up.
 
-**Strengths:**
-- **Behavioral/Cultural Fit (Strong):** Embodied Mastercard Way—open-minded, coachable, humble, growth-oriented. No ego, no defensiveness. This foundation is harder to instill than technical skills.
-- **Problem-Solving (Strong):** Methodical approach, edge case awareness, self-corrects bugs without prompting. Logic is sound.
-- **Practical Experience (Adequate):** Built and shipped Hand Up Housing (full-stack, authentication, RBAC, GCP deployment). Real-world shipping experience.
 
-**Concern (Must Address):**
-- **Java Discomfort (Red Flag):** Candidate explicitly requested to code in Python instead of Java despite Java role requirement. This signals Java is NOT his strong language. For a Mastercard L9 role (payments platform, likely Java-heavy), this is a meaningful gap.
 
-**Mitigation:**
-If hired, **requires 3-4 month Java immersion** (in addition to domain knowledge ramp). Pair with senior Java mentor. Start with isolated features, not complex transaction logic. Acceptable timeline for L9, but needs planning.
 
-**Risk Level:** Medium (Java gap is rampable but not trivial)
 
----
 
-**RECOMMENDATION:**
-
-**Hire: YES, with condition**
-
-Hire Daniel for L9 IF:
-1. You have bandwidth for extended mentorship on Java
-2. You pair him with strong Java + payments domain expert
-3. You accept 6-month ramp timeline (vs. typical 3 months for strong Java candidate)
-
-**Hire: NO, if**
-1. Java proficiency is non-negotiable
-2. Mentorship bandwidth is limited
-3. You need quick contributor (not 6-month ramp)
-
----
-
-**Alternative Role/Level:**
-
-If Java gap is disqualifying for this role:
-
-- ☐ No, I would not recommend hiring this person at all
-- ☑ Yes, I recommend this person for: **Python-focused backend role (e.g., if Mastercard has Python microservices team), or L9 role with extended mentorship commitment**
+Lakshmi does not demonstrate sufficient depth or breadth in understanding her own systems or enterprise technical concepts, given 15 years of experience. We will not be moving forward with her candidature.
