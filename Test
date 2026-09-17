@@ -1,44 +1,20 @@
-**INTERVIEW EVALUATION - L9 CANDIDATE**
+**TECHNICAL SCORE: 6.5/10**
 
-**Candidate:** Corey | **Role:** L9 Junior Technical SME (Java)
-
----
-
-**TECHNICAL SKILLS**
-
-☑ **No evidence: Does not exhibit sufficient technical skills**
-
-Corey failed to understand basic 24-hour time validation (0-23 hours, 0-59 minutes) even with multiple prompts. When given edge cases (minute=25, hour=25), he couldn't identify why they're invalid without explanation. Logic gaps and Java weakness compounded each other—he couldn't problem-solve independently or complete the challenge. For L9, candidates must validate requirements and code straightforward solutions with minimal guidance. Corey did neither.
+1. Strong OOP and database fundamentals (inheritance, polymorphism, normalization, relationships).
+2. Weak on completeness: SQL JOIN incomplete, REST endpoints not detailed, JWT validation flow incomplete.
+3. Production experience minimal (6 months); no error handling or testing strategy discussed.
 
 ---
 
-**MASTERCARD WAY BEHAVIORAL SKILLS**
+**BEHAVIORAL SCORE: 7/10**
 
-☑ **Strong Behavior**
-
-Corey demonstrates strong behavioral fit: admitted gaps without defensiveness, owned 100% of capstone mistake, showed customer empathy on nonprofit project (simplified over-engineered solution), accepted feedback readily, and proactively collaborated with peers. No ego, no blame-shifting. Excellent culture alignment.
-
----
-
-**OVERALL DECISION**
-
-☑ **No: Technical skills do not meet the bar for L9 role.**
+1. Strong coachability, growth mindset, and thoughtful reasoning evident through certifications and questioning.
+2. Communication needs work: multiple connection issues, halting speech, confidence lacking.
 
 ---
 
-**EXTENSIVE NOTES**
+**FINAL ASSESSMENT**
 
-**Decision: NO HIRE**
-
-Strong behavior doesn't offset critical technical gap. L9 requires independent problem-solving on basic requirements—Corey couldn't validate time constraints or complete a simple coding challenge even with prompting. Logic gaps (not just syntax) suggest fundamental understanding issues. For payment systems, this is disqualifying. Recommend: Corey invest 6-12 months in structured learning before applying to tier-1 companies. Strong culture fit means he could grow elsewhere with patience; Mastercard needs immediate technical capability.
-
-
-
-
-
-
-
-
-
-
-Lakshmi does not demonstrate sufficient depth or breadth in understanding her own systems or enterprise technical concepts, given 15 years of experience. We will not be moving forward with her candidature.
+1. **CONDITIONAL HIRE** — L9 Junior Java Engineer with solid fundamentals and coachability.
+2. Requires 4–6 month ramp with senior mentor on SQL, REST design, JWT, and error handling.
+3. Medium risk: gaps are typical and coachable for a fresher.
