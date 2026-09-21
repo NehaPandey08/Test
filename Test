@@ -1,24 +1,23 @@
-Hi Shivani,
+To: Pavan Verma
+Cc: Shrikant Belan; [Pavan's manager]; Aman Garg; Ankit Kothari
 
-On the day of PI Planning, I had a 1:1 scheduled with you. I declined that invite and asked you to reschedule it for this week. It is now Friday, and it has not been rescheduled.
+Hi Pavan,
 
-Since the conversation has been delayed, I am sharing the feedback points in writing so there is no further delay in you having this information.
+Given that we're still catching up from the underestimation that caused the Phase 3 delay, please don't finalize T-shirt sizes until we have enough detail to size responsibly. Specifically:
 
-1. Punctuality and presence: Consistent lateness to sessions, including PI Planning, and lack of communication around availability, including today, where you were offline past 11:45 AM with no notice and no out-of-office set.
+Before we commit to any sizing:
 
-2. Process compliance: Following team practices such as Jira hygiene is expected even where you disagree with their utility. Concerns should be raised through the right channel, not opted out of individually.
+1. **Ensure the requirement documents what's actually covered in each size.** Whatever functionality we agree is in scope for a given T-shirt size needs to be documented by the product team and agreed upon by the engineering team. Anything requested later that wasn't part of that documented scope should be treated as additional effort, not absorbed into the original estimate.
 
-3. Ownership and technical judgment: Proper analysis is expected before building new components, including justifying reuse decisions rather than defaulting to literal interpretation of acceptance criteria.
+2. **Establish expected behavior for these new card formats explicitly.** Since CIS, SMS, and IPM are new formats for us in this context, don't assume behavior parallels an existing format unless product confirms it does.
 
-4. Professional conduct: Walking out of sessions, shutting your laptop, making visible reactions such as eye-rolling in meetings, and use of unprofessional language or labels toward colleagues (as previously discussed) are not acceptable in any circumstance.
+3. **Get field-level mapping from product before sizing.** The product team will need to share which fields in these new card formats map to existing fields in our current card formats. This is the key input that tells us whether existing code/logic can be reused or whether we're building net-new. Without this, any size we give is a guess.
 
-5. Response to accountability: When commitments, deadlines, or expectations are raised by a peer, manager, or senior, the response needs to be professional engagement, not insults or disengagement.
+4. **Get clarity on new/additional fields.** For any fields in these new formats that don't map to something existing, we need their expected behavior and usage documented before we can size them.
 
-6. Delivery velocity and flexibility: Scope changes and additional work are part of the role and should not be met with resistance.
+Please confirm whether the current features' documentation already contains this level of detail. If not, please discuss with them and have it documented before we attempt any estimation.
 
-7. Return to office and in-person presence: Continued improvement is expected, including consistent in-person presence during scrum ceremonies.
+Please ensure we have a shared, documented understanding of what's needed before sizing begins.
 
-I expect this to be scheduled and held without further delay. Please find a slot for early next week.
-
-Regards,
+Thanks,
 Neha
