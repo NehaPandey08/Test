@@ -1,23 +1,18 @@
-To: Pavan Verma
-Cc: Shrikant Belan; [Pavan's manager]; Aman Garg; Ankit Kothari
+Hi Aman,
 
-Hi Pavan,
+Given that we're still catching up from the underestimation that caused the Phase 3 delay, we will not be able to provide T-shirt sizes until we have enough detail to size responsibly. Specifically:
 
-Given that we're still catching up from the underestimation that caused the Phase 3 delay, please don't finalize T-shirt sizes until we have enough detail to size responsibly. Specifically:
+1. **The requirement documents what's actually covered in each size.** Whatever functionality we agree is in scope for a given T-shirt size needs to be documented by the product team and agreed upon by the engineering team. Anything requested later that wasn't part of that documented scope would be treated as additional effort, not absorbed into the original estimate.
 
-Before we commit to any sizing:
+2. **Establish expected behavior for these new card formats explicitly.** Since some of these are new card formats for us in this context, we cannot assume behavior parallels an existing format unless product confirms it does.
 
-1. **Ensure the requirement documents what's actually covered in each size.** Whatever functionality we agree is in scope for a given T-shirt size needs to be documented by the product team and agreed upon by the engineering team. Anything requested later that wasn't part of that documented scope should be treated as additional effort, not absorbed into the original estimate.
+3. **The product team will provide field-level mapping before sizing.** The product team will need to share which fields in these new card formats map to existing fields in our current card formats. This is the key input that tells us whether existing code/logic can be reused or whether we're building net-new. Without this, any size we give is a guess.
 
-2. **Establish expected behavior for these new card formats explicitly.** Since CIS, SMS, and IPM are new formats for us in this context, don't assume behavior parallels an existing format unless product confirms it does.
+4. **Provide clarity on new/additional fields.** For any fields in these new formats that don't map to something existing, we need their expected behavior and usage documented before we can size them.
 
-3. **Get field-level mapping from product before sizing.** The product team will need to share which fields in these new card formats map to existing fields in our current card formats. This is the key input that tells us whether existing code/logic can be reused or whether we're building net-new. Without this, any size we give is a guess.
+Please confirm whether the current features' documentation already contains this level of detail. If not, please have it documented so we can provide a genuine estimate.
 
-4. **Get clarity on new/additional fields.** For any fields in these new formats that don't map to something existing, we need their expected behavior and usage documented before we can size them.
-
-Please confirm whether the current features' documentation already contains this level of detail. If not, please discuss with them and have it documented before we attempt any estimation.
-
-Please ensure we have a shared, documented understanding of what's needed before sizing begins.
+This is to ensure we have a shared, documented understanding of what's needed before sizing begins.
 
 Thanks,
 Neha
