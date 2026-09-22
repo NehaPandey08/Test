@@ -1,18 +1,30 @@
-Hi Aman,
 
-Given that we're still catching up from the underestimation that caused the Phase 3 delay, we will not be able to provide T-shirt sizes until we have enough detail to size responsibly. Specifically:
+Hi Ankit,
 
-1. **The requirement documents what's actually covered in each size.** Whatever functionality we agree is in scope for a given T-shirt size needs to be documented by the product team and agreed upon by the engineering team. Anything requested later that wasn't part of that documented scope would be treated as additional effort, not absorbed into the original estimate.
+For requirement #1 (Seeding DD & Messages) and #2 (Seeding NCM Mappings):
 
-2. **Establish expected behavior for these new card formats explicitly.** Since some of these are new card formats for us in this context, we cannot assume behavior parallels an existing format unless product confirms it does.
+If the product team can confirm the following three points:
 
-3. **The product team will provide field-level mapping before sizing.** The product team will need to share which fields in these new card formats map to existing fields in our current card formats. This is the key input that tells us whether existing code/logic can be reused or whether we're building net-new. Without this, any size we give is a guess.
+1. The requirement is strictly contained to the seeding of data for these card formats.
+2. They follow the exact same data and design as the current card formats available in ModelHub.
+3. There is no additional functional requirement needed to make these card formats functional.
 
-4. **Provide clarity on new/additional fields.** For any fields in these new formats that don't map to something existing, we need their expected behavior and usage documented before we can size them.
+We can estimate these at 45 SPs (M) each, 90 SPs in total.
 
-Please confirm whether the current features' documentation already contains this level of detail. If not, please have it documented so we can provide a genuine estimate.
+Any additional change needed to seed the DD, Messages, or Mappings would incur extra story points.
 
-This is to ensure we have a shared, documented understanding of what's needed before sizing begins.
+We've also added a query on the Mapping feature and would need that clarified before we can commit to this T-shirt size (M).
+
+If the card format is net new, we would need 45–60 SPs (L) per new card format. This is subject to change depending on the complexity involved, and we'll await Aman's and Peter's input before committing to it.
+
+For requirement #3, the team needs a discussion with the product team before T-shirt sizing can be done.
+
+For requirement #4, we can estimate it at 45–60 SPs (L). This is subject to change depending on complexity, once the stories are created and refined.
+
+On field mapping: since the existing production system is well defined, we'll wait for the product team to provide the mapping from the existing system to the ModelHub structure. That mapping may impact the current sizing.
 
 Thanks,
 Neha
+
+
+ , 
