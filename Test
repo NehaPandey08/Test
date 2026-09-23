@@ -1,11 +1,13 @@
+**CANDIDATE 19 — Sean (L9 Junior)**
+
 ---
 
-## CANDIDATE 18 — Radhika Pilankar (FINAL ASSESSMENT)
+## FINAL ASSESSMENT
 
-**Technical reasoning:** Surface-level SQL Server/.NET knowledge with fundamental gaps (string as primitive, table scans undefined, circular definitions of stored procedures/functions/triggers, extension methods conflated with DI). Cannot explain own 3-year Investor Center architecture; 6-year tenure suggests framework execution, not design ownership.
+**Technical reasoning:** Sean demonstrates solid L9 fundamentals with architectural judgment beyond pure coding. He identified real risks in the no-code vs custom backend debate (authentication, performance, storage), showed understanding of CI/CD pipelines (GitHub Actions, staging gates, automated testing), and can reason about async/sync communication (traffic light analogy helped him grasp blocking behavior). Coding challenge (time parsing with string split) solved cleanly. Gaps: Resume breadth (full stack + microservices + GCP) doesn't match depth of examples (contact forms, websites). Testing strategy weak (contact form deployed untested to Friday production). Async/sync vocabulary initially missing but concepts understood. Agentic AI work (BMO orchestrator) shows self-directed learning but infinite loop issue suggests debugging still developing.
 
-**Behavioral reasoning:** Defensive patterns ("I don't recollect" on L4 concepts), requires guidance for correct answers, lacks independent technical depth. Shows engagement but insufficient rigor for L6 role.
+**Behavioral reasoning:** Strong growth mindset evident—received feedback on agentic AI → immediately enrolled in course + built projects. Accountability demonstrated (found own bug Saturday, owned fix, informed CTO). Collaborative problem-solving (convinced skeptical colleagues through evidence, not dominance). Intellectual humility (admits "don't know terminology" for things he's experienced). Engagement signals positive (asked about team, role, day-to-day; genuine curiosity). Honest about limitations (long night debugging, tired but still present).
 
-**Extensive notes:** L4/L5 individual contributor level — does not meet L6 criteria. Not suitable for senior API integration or architectural responsibility.
+**Extensive notes:** Sean is conditional L9 hire with 4-6 month ramp. Strong behavioral foundation (ownership, learning agility, collaboration). Technical gaps are L9-appropriate (terminology, depth in one stack, testing rigor). Recommend pairing with senior mentor on: architectural design patterns, end-to-end testing strategy (don't assume CI/CD catches everything), and depth over breadth (master one backend stack deeply). His no-code debate shows architectural thinking; his agentic AI work shows learning orientation. Hire with structured mentorship.
 
-**Verdict: NO HIRE for L6 — Does not meet criteria**
+**Verdict: CONDITIONAL HIRE — L9 Junior Backend Engineer**
