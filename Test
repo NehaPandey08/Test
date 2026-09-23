@@ -1,25 +1,11 @@
-**TECHNICAL SCORE: 6/10**
-
-Mestaban demonstrates strong logical problem-solving on the time validation challenge—he correctly identified constraints (HH: 0-23, MM: 0-59), understood the solution approach (extract characters, validate ranges), and used IntelliSense effectively to debug. He got stuck on Java typecasting syntax (char to int conversion) but immediately recognized the error and self-corrected, showing good learning agility. For L9 fresher transitioning from infrastructure to backend, logic strength outweighs syntax weakness; syntax fluency is coachable within weeks.
-
 ---
 
-**BEHAVIORAL SCORE: 7/10**
+## CANDIDATE 18 — Radhika Pilankar (FINAL ASSESSMENT)
 
-Mestaban demonstrates strong coachability by accepting guidance ("use IntelliSense"), admitting knowledge gaps without defensiveness ("I'm just getting syntax incorrect"), and pushing through obstacles rather than giving up. He showed collaborative problem-solving mentality from infrastructure background (cross-team work on agentic SRE), accountability for automation delays, and genuine curiosity about backend concepts. Communication is clear and structured; hesitation reflects learning, not inability.
+**Technical reasoning:** Surface-level SQL Server/.NET knowledge with fundamental gaps (string as primitive, table scans undefined, circular definitions of stored procedures/functions/triggers, extension methods conflated with DI). Cannot explain own 3-year Investor Center architecture; 6-year tenure suggests framework execution, not design ownership.
 
----
+**Behavioral reasoning:** Defensive patterns ("I don't recollect" on L4 concepts), requires guidance for correct answers, lacks independent technical depth. Shows engagement but insufficient rigor for L6 role.
 
-**EXTENSIVE HIRING DECISION NOTES**
+**Extensive notes:** L4/L5 individual contributor level — does not meet L6 criteria. Not suitable for senior API integration or architectural responsibility.
 
-Mestaban is a **conditional hire for L9 Junior Backend Java Engineer**, representing a legitimate career transition from platform/infrastructure to application backend. Despite infrastructure background, his strong logical reasoning on coding challenges, correct problem-solving approach, and coachability indicate he can master Java syntax and backend fundamentals with structured mentorship. His infrastructure experience (DevOps thinking, automation, cross-team coordination) is transferable; his main gap is Java syntax fluency and REST API design depth, both are L9 entry-level expectations and learnable in 4–6 months. Recommend pairing with senior mentor for Java bootcamp, REST API design patterns, and backend-specific challenges; infrastructure background is asset not liability for understanding system-level thinking.
-
----
-
-**FINAL VERDICT: CONDITIONAL HIRE**
-
-**For:** L9 Junior Backend Java Engineer (stream transition track)
-
-**Ramp:** 4–6 months with senior mentor on Java syntax, REST design, Spring Boot patterns, error handling
-
-**Hire if:** Willing to commit to backend track and accept 6-month structured learning period
+**Verdict: NO HIRE for L6 — Does not meet criteria**
