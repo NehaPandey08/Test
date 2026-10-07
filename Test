@@ -1,19 +1,19 @@
----
+Hi Vaishali,
 
-## CANDIDATE 22 — Sunaina Patel (BNY, Config Studio)
+I hope you are doing better.
+We wanted to check in with you to see how your recovery is going and if you are feeling well.
 
-**Demonstrated:** Spring Cloud Config architecture, Kubernetes service discovery, BeanPostProcessor environment updates, @RefreshScope bean lifecycle, API gateway rate limiting (10k/min, 30s timeout, 2500ms response), client onboarding flow, multi-source config support (GitLab, SMS, S3), Kafka async messaging, MySQL/MongoDB integration.
+To support you through this and formally record your work from home arrangement, we need to process it as a medical accommodation under the RTO policy. For this, please share the following with Karan (copied here):
+1. Medical documentation related to your injuries, such as a doctor's certificate or treatment records
+2. Your doctor's advice on recovery, including an expected timeline for resuming office attendance
 
-**Not demonstrated:** Database row-level locking, distributed locking patterns, circuit breaker implementation, token rotation strategy, Kubernetes Secrets injection at runtime, fallback strategies for outages.
+Please share these by Friday (Oct 9) EOD.
 
-**Extensive notes:** Hire for production microservices experience. Strengths: shipped Config Studio with multi-source support, managed API gateway rate limiting at scale, debugged and fixed production rate-limit incidents (identified double-fetch inefficiency). Onboarding priorities: distributed locking patterns for concurrent access, circuit breaker library integration (Resilience4j), secret rotation automation (Kubernetes Secrets injection).
+If you need any support in the meantime, please let me know.
 
----
+Karan,
 
-## CANDIDATE 23 — Oracle (5 years, Subscription Billing)
+Please do add any other documents we require for this.
 
-**Demonstrated:** Monolith-to-microservices migration strategy, shadow validation rigor (4-6 months production data comparison), multi-service coordination, rate limiting, caching patterns, queuing for async writes, exponential backoff retry logic, Terraform infrastructure-as-code, multi-region vault deployment, database query optimization via batching, Kafka async messaging, Java/Spring Boot/Hibernate stack.
-
-**Not demonstrated:** Database row-level locking, optimistic locking with version columns, circuit breaker implementation, hard retry limits, idempotency key design, recovery procedures for partial failures.
-
-**Extensive notes:** Hire for scale experience. Strengths: led migration with systematic validation (caught Brazil tax flow miss through data pipeline), handled multi-region infrastructure (Terraform), designed resilience patterns (exponential backoff, queue-based async). Onboarding priorities: database concurrency control (FOR UPDATE, optimistic locking), circuit breaker pattern (hard cutoff on retries), compensation logic for distributed transactions.
+Regards,
+Neha
