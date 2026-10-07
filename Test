@@ -1,21 +1,36 @@
-Hi Karan,
+---
 
-We need your guidance on an attendance situation with my direct report, Vaishali Bhaip, [Employee ID].
+## CANDIDATE 20 — [Aorus, UPI Payments] (FINAL ASSESSMENT)
 
-Background:
-1. On 26/08, Vaishali informed the team that she had a bike accident on 25/08 while commuting home from office and would be working from home.
-2. On 31/08, she informed the team she would continue working from home. On 01/09, Shrikant asked her to apply for Work from Elsewhere. She did not apply, citing medical grounds, and requested a temporary medical exemption for the first three weeks of September. Shrikant advised her to raise an AskPS ticket for the exemption.
-3. It has now been six weeks. She has not attended office on any day during this period, the exemption period she requested has ended, and there has been no indication of an expected return date. No medical documentation has been shared.
-4. Separately, the expected office attendance for the team is an average of 2.5 days per month. Her average over the last eight months is 1.8, which was below expectation before the reported accident.
-5. She has been informed multiple times that her attendance is below the expected average and asked to improve it, with no visible improvement.
+**Technical reasoning:** UPI system built from scratch since January 2026 with 3 banks live demonstrates domain depth but architectural gaps: weak on design patterns (hesitant on Builder), OOP fundamentals inconsistent (inheritance/polymorphism confusion, kept describing database schema instead), false claims (HTTP "cannot" be encrypted), no database optimization knowledge (connection pooling, N+1 queries, caching unmentioned), manual flag-based circuit breaking instead of resilience patterns. Strong on flow mechanics; weak on architectural decision-making.
 
-We want to handle this fairly, if this is a genuine medical situation. At the same time, we need a consistent basis for exceptions so the attendance policy is applied equally across the team.
+**Behavioral reasoning:** Shows ownership and domain knowledge, proactively communicated about failed interview to HR. Honest about knowledge gaps. However, when pressed on architecture patterns, fell back to database thinking rather than OOP design—suggests implementation mindset, not architectural mindset.
 
-Kindly advise on the following:
-1. What documentation, if any, is required to formally approve an extended work from home arrangement on medical grounds (for example, a medical certificate, fitness to travel assessment, or expected recovery timeline)?
-2. Should this be routed through a formal medical accommodation or leave process, and who owns that process?
-3. What timeline is reasonable to request the documentation, and what is the next step if it is not provided?
-4. How should the attendance shortfall prior to the accident be addressed, separately from the current situation?
+**Extensive notes:** L5 Senior IC, not L6 Architect. Built UPI features competently but lacks architectural depth: no design pattern fluency, resilience architecture gaps, no database optimization strategy, no pre-production load testing discipline. Real question: How much architecture vs execution within established patterns?
 
-Regards,
-Neha Pandey
+**Verdict: NO HIRE for L6 Architect — L5 IC caliber**
+
+
+---
+
+## CANDIDATE 22 — Sunaina Patel (BNY, Config Studio)
+
+**Technical reasoning:** Solid Spring Cloud Config microservices knowledge with hands-on implementation (multi-source support, Kubernetes discovery, BeanPostProcessor, API gateway rate limiting). Gaps: security practice (credentials in Docker, not Kubernetes Secrets), reactive vs proactive resilience (increases timeout AFTER outage, not circuit breaker BEFORE), token rotation unautomated (year-long GitLab token).
+
+**Behavioral reasoning:** Honest about uncertainty, defensive on security (reasonable but suboptimal), learning-oriented (Splunk monitoring). Strong debugging skills; problem-solving is post-incident rather than proactive architecture.
+
+**Extensive notes:** L5 Senior Backend, not L6 Architect. Shipped production features; gaps are proactive resilience patterns (circuit breaker, bulkhead, fallback) and security best practices. Hire for mid-level IC with mentorship on resilience architecture and secret rotation. 3-4 month ramp to L6 readiness with senior architect pairing.
+
+**Verdict: CONDITIONAL HIRE — L5 Senior Backend Engineer**
+
+---
+
+## CANDIDATE 23 — Oracle (5 years, Subscription Billing Migration)
+
+**Technical reasoning:** Real 5-year migration experience demonstrates solid distributed systems thinking: light-service-first de-risking, 4-6 month shadow validation rigor, multi-service coordination, resilience patterns (rate limiting, caching, queuing, exponential backoff), infrastructure-as-code. Gaps: database concurrency control not explicit (FOR UPDATE, optimistic locking missing), circuit breaker incomplete (retry strategy but no hard cutoff), design ownership clarity weak ("we all worked on it"), Kafka ordering guarantees for billing unaddressed.
+
+**Behavioral reasoning:** Pragmatic debugging (print statements, hypothesis testing), intellectual honesty, willingness to learn. Code-switching reduces clarity; communication improves once concepts click. Reasonable time management under pressure (submitted working solution vs incomplete).
+
+**Extensive notes:** L5 Mid-Level Backend, not L6 Architect. Real migration scale valuable; hire for senior IC track with mentorship on database locking patterns, circuit breaker implementation (Resilience4j), and communication precision. 3-4 month ramp to L6 with senior mentor.
+
+**Verdict: CONDITIONAL HIRE — L5 Senior Backend Engineer**
