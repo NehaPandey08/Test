@@ -1,36 +1,19 @@
 ---
 
-## CANDIDATE 20 — [Aorus, UPI Payments] (FINAL ASSESSMENT)
-
-**Technical reasoning:** UPI system built from scratch since January 2026 with 3 banks live demonstrates domain depth but architectural gaps: weak on design patterns (hesitant on Builder), OOP fundamentals inconsistent (inheritance/polymorphism confusion, kept describing database schema instead), false claims (HTTP "cannot" be encrypted), no database optimization knowledge (connection pooling, N+1 queries, caching unmentioned), manual flag-based circuit breaking instead of resilience patterns. Strong on flow mechanics; weak on architectural decision-making.
-
-**Behavioral reasoning:** Shows ownership and domain knowledge, proactively communicated about failed interview to HR. Honest about knowledge gaps. However, when pressed on architecture patterns, fell back to database thinking rather than OOP design—suggests implementation mindset, not architectural mindset.
-
-**Extensive notes:** L5 Senior IC, not L6 Architect. Built UPI features competently but lacks architectural depth: no design pattern fluency, resilience architecture gaps, no database optimization strategy, no pre-production load testing discipline. Real question: How much architecture vs execution within established patterns?
-
-**Verdict: NO HIRE for L6 Architect — L5 IC caliber**
-
-
----
-
 ## CANDIDATE 22 — Sunaina Patel (BNY, Config Studio)
 
-**Technical reasoning:** Solid Spring Cloud Config microservices knowledge with hands-on implementation (multi-source support, Kubernetes discovery, BeanPostProcessor, API gateway rate limiting). Gaps: security practice (credentials in Docker, not Kubernetes Secrets), reactive vs proactive resilience (increases timeout AFTER outage, not circuit breaker BEFORE), token rotation unautomated (year-long GitLab token).
+**Demonstrated:** Spring Cloud Config architecture, Kubernetes service discovery, BeanPostProcessor environment updates, @RefreshScope bean lifecycle, API gateway rate limiting (10k/min, 30s timeout, 2500ms response), client onboarding flow, multi-source config support (GitLab, SMS, S3), Kafka async messaging, MySQL/MongoDB integration.
 
-**Behavioral reasoning:** Honest about uncertainty, defensive on security (reasonable but suboptimal), learning-oriented (Splunk monitoring). Strong debugging skills; problem-solving is post-incident rather than proactive architecture.
+**Not demonstrated:** Database row-level locking, distributed locking patterns, circuit breaker implementation, token rotation strategy, Kubernetes Secrets injection at runtime, fallback strategies for outages.
 
-**Extensive notes:** L5 Senior Backend, not L6 Architect. Shipped production features; gaps are proactive resilience patterns (circuit breaker, bulkhead, fallback) and security best practices. Hire for mid-level IC with mentorship on resilience architecture and secret rotation. 3-4 month ramp to L6 readiness with senior architect pairing.
-
-**Verdict: CONDITIONAL HIRE — L5 Senior Backend Engineer**
+**Extensive notes:** Hire for production microservices experience. Strengths: shipped Config Studio with multi-source support, managed API gateway rate limiting at scale, debugged and fixed production rate-limit incidents (identified double-fetch inefficiency). Onboarding priorities: distributed locking patterns for concurrent access, circuit breaker library integration (Resilience4j), secret rotation automation (Kubernetes Secrets injection).
 
 ---
 
-## CANDIDATE 23 — Oracle (5 years, Subscription Billing Migration)
+## CANDIDATE 23 — Oracle (5 years, Subscription Billing)
 
-**Technical reasoning:** Real 5-year migration experience demonstrates solid distributed systems thinking: light-service-first de-risking, 4-6 month shadow validation rigor, multi-service coordination, resilience patterns (rate limiting, caching, queuing, exponential backoff), infrastructure-as-code. Gaps: database concurrency control not explicit (FOR UPDATE, optimistic locking missing), circuit breaker incomplete (retry strategy but no hard cutoff), design ownership clarity weak ("we all worked on it"), Kafka ordering guarantees for billing unaddressed.
+**Demonstrated:** Monolith-to-microservices migration strategy, shadow validation rigor (4-6 months production data comparison), multi-service coordination, rate limiting, caching patterns, queuing for async writes, exponential backoff retry logic, Terraform infrastructure-as-code, multi-region vault deployment, database query optimization via batching, Kafka async messaging, Java/Spring Boot/Hibernate stack.
 
-**Behavioral reasoning:** Pragmatic debugging (print statements, hypothesis testing), intellectual honesty, willingness to learn. Code-switching reduces clarity; communication improves once concepts click. Reasonable time management under pressure (submitted working solution vs incomplete).
+**Not demonstrated:** Database row-level locking, optimistic locking with version columns, circuit breaker implementation, hard retry limits, idempotency key design, recovery procedures for partial failures.
 
-**Extensive notes:** L5 Mid-Level Backend, not L6 Architect. Real migration scale valuable; hire for senior IC track with mentorship on database locking patterns, circuit breaker implementation (Resilience4j), and communication precision. 3-4 month ramp to L6 with senior mentor.
-
-**Verdict: CONDITIONAL HIRE — L5 Senior Backend Engineer**
+**Extensive notes:** Hire for scale experience. Strengths: led migration with systematic validation (caught Brazil tax flow miss through data pipeline), handled multi-region infrastructure (Terraform), designed resilience patterns (exponential backoff, queue-based async). Onboarding priorities: database concurrency control (FOR UPDATE, optimistic locking), circuit breaker pattern (hard cutoff on retries), compensation logic for distributed transactions.
