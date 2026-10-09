@@ -1,19 +1,14 @@
-Hi Vaishali,
+Day before yesterday, aman sent out email despite being told that the latest feature is 61sp asking to deliver everything by October end. Ankit had to ask him to redraft sharing priority and let me confirm by when this will get deployed. Clearly mentioned oct 14 release date still mentioned 13th oct on email just a few hours later(another example of either doesn't remember discussions or goes back on it or changes it to accomodate his convenience) changed priority of two p1s to P0 after the 6:15 pm call and didn't call out the change in priority, leading ankit to ask why are qe prioritizing p1 over p0. Had to recheck the thread to understand what happened. 
 
-I hope you are doing better.
-We wanted to check in with you to see how your recovery is going and if you are feeling well.
+While the discussion over the 61sp feature a new requirement that was never discussed before or is documented as part of the current feature has been made a P0 leading to additional analysis and possible rework of the application as well as deployment and sprint plan
 
-To support you through this and formally record your work from home arrangement, we need to process it as a medical accommodation under the RTO policy. For this, please share the following with Karan (copied here):
-1. Medical documentation related to your injuries, such as a doctor's certificate or treatment records
-2. Your doctor's advice on recovery, including an expected timeline for resuming office attendance
+As a product owner he shows a conspicuous lack of vision, the guiding principle seems to clone the excel sheet currently in use in a web application rather than thinking through things, do we need this feature, should the teams being targeted be asked to use a better system, doesn't think through requirements coming up with things in installment leading to rework and wasted efforts, priority understanding is not good, peioritizes trivial sorting issues over actual features, doesn't understand the importance of data lineage and share incorrect repo, lacks integrity, despite knowing the item was moved out if scope raised adefect on being proven the scope overwritevtwo defects tk remive the trail for invalid defect, didn't prioritize an entire feature on realising the miss tried to get it inplemented by raising urgency through defect classification, despite receiving email laying out the implementation details raised no concerns proposed no changes later raised defects and on being pointed to email said should have asked on the day of implementation. Despite being proven both if these still unwilling to mark the defect as closed creating false data points against the development team. Reaches out to developers with backdoor requirements and doesn't inform the delivery manager. Requirements are poorly refined and articulated. Poorly thought through. Have to ask specific questions to lead him to the point on realisation that the scenarios are either not considered or contradictory, requirements change silently and are never acknowledged. Responds to disagreements and change with labels and characterizations with no data to back it up.
 
-Please share these by Friday (Oct 9) EOD.
+Keeps adding work to the scope then says development team delayed delivery, when the new manager starts asking for Priority for every item as a response to manage the delayed timeline, labelled it as "process change is delaying delivery" when delivery had slipped by 6 weeks before I joined the team. Goes back on scope change and calls it a defect, when team proves it's not a defect Overrode the defects, when requested to not override and create new defects to maintain documentation hygiene labels it "stubborn-ness", tries to push his poor prioritization of requirements and changing his mind about a requirement as a defect, when Evidence is provided to establish the contrary labels it lack of support and collaboration on asking for data received none
 
-If you need any support in the meantime, please let me know.
+On being called out for defect overrid called stubborn-ness when Ankit intervened reachwd out and told his mother is in the hospital and hence he got a little heated and has the argument i responded that I'm sorry to hear, he could have let me know in person and we could have discussed things later and that I was still not arguing even when he was i was just holding the line, he peomised to setup recurring 1:1s on Ankit's recommendation but never did. Next day told me due to his situation would we be able to use the iverriden defects as the new one and going forward they will always create a new tjcket. I responded "you got it. We will create two new tickets by clining these and will revert them to their original state" and then he has the audacity to label lack of support and collaboration
 
-Karan,
+doesn't understand difference between diff, histiry, audit log and release notes for a message specifications new version release
 
-Please do add any other documents we require for this.
+Unwilling to accept help or guidance or suggestions until backed into a corner by logical contradictions or third party intervention
 
-Regards,
-Neha
