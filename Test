@@ -11,3 +11,12 @@ The blocker came from my assessment and escalation. It was then addressed direct
 I need clarity on the expectation: When I identify and escalate a blocker, what is my role in the resolution? Should blockers be handled directly with developers, or should I be part of conversations addressing blockers my team surfaced?
 This is purely about alignment so I can operate correctly within whatever structure you and the product team prefer.
 Can we discuss this Monday?
+
+.
+I need clarity on one straightforward question: What is the engineering manager's role when a developer is blocked on product input?
+Because the current dynamic creates a bind:
+If I call it out: Public escalation to leadership
+If I don't call it out: Blocker remains, delivery is impacted, I'm accountable for the miss
+There's no middle ground. One of those has to be wrong.
+So I'm asking directly: What does the product team think an engineering manager is supposed to do when a technical blocker exists? Raise it or absorb it?
+Because if the expectation is to absorb it and keep the team working without visibility, that's a choice—but I need to understand that's what you're asking for.
