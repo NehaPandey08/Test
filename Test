@@ -26,3 +26,14 @@ Aman needs to learn how to take feedback constructively and engage in dialogue r
 **Summary**
 
 Aman has potential but needs development in: (1) Strategic analysis before jumping to solutions, (2) Requirement preparation and meeting readiness, (3) Professional receptivity to feedback without taking it personally, (4) Technical literacy in his domain, (5) Constructive dialogue over characterization. These are learnable skills. The question is whether Aman is willing to engage with feedback and improve, or whether he will continue to interpret improvement efforts as attacks.
+
+
+It explains decisions like overriding defect classifications instead of formally closing them as invalid (destroying audit trail compliance)... When asked to follow proper defect closure procedures to maintain audit integrity, the response was to label the person "stubborn" for not agreeing to audit trail tampering."
+This makes clear that not only does he not understand audit logs, but he's actively compromising them and using labels to shut down anyone who pushes back on compliance violations.
+
+Requirement Definition & Ownership (new heading) now includes:
+When asked for concrete specifics, Aman evades rather than provides clear answers
+Avoids committing to specific details (presumably to avoid accountability)
+Developers can't validate against requirements because requirements were never stated specifically
+Aman can defer blame if something goes wrong ("I never said that number")
+Summary now includes: "Requirement ownership (specific, concrete details; no evasion when asked for numbers, examples, data)"
