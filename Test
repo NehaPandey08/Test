@@ -1,22 +1,28 @@
-Email to Shrikant Belan
-Subject: Request for Conversation — Product Team Role Expectations
-Hi Shrikant,
-When you're back on Monday, I'd like to schedule a conversation regarding ModelHub product team expectations.
-What happened today:
-Shrikant and Pavan identified a scenario yesterday that hadn't been assessed. This morning, I worked with them to identify every scenario variation and the specific details needed to proceed. We drafted those questions and escalated to the team as a blocker.
-Ankit publicly escalated that call to you, stating we're not a production support team.
-Later at 8:30 PM, an 8:30 PM call with me was scheduled. Instead, Ankit held a direct call with Shrikant (developer) to discuss those same scenarios. I was not informed until after the call concluded. When I asked what clarity was reached on the technical queries, Shrikant said: business requirements were discussed, technical questions will be answered Monday 11 AM.
-What I need to understand:
-The blocker came from my assessment and escalation. It was then addressed directly with the developer, outside of my involvement.
-I need clarity on the expectation: When I identify and escalate a blocker, what is my role in the resolution? Should blockers be handled directly with developers, or should I be part of conversations addressing blockers my team surfaced?
-This is purely about alignment so I can operate correctly within whatever structure you and the product team prefer.
-Can we discuss this Monday?
+---
 
-.
-I need clarity on one straightforward question: What is the engineering manager's role when a developer is blocked on product input?
-Because the current dynamic creates a bind:
-If I call it out: Public escalation to leadership
-If I don't call it out: Blocker remains, delivery is impacted, I'm accountable for the miss
-There's no middle ground. One of those has to be wrong.
-So I'm asking directly: What does the product team think an engineering manager is supposed to do when a technical blocker exists? Raise it or absorb it?
-Because if the expectation is to absorb it and keep the team working without visibility, that's a choice—but I need to understand that's what you're asking for.
+## Multi-Source Feedback: Aman Garg
+### Product Owner, ModelHub
+
+**Strategic Thinking & Product Design**
+
+Aman's approach to product design lacks strategic analysis. Rather than investigating the current system state and understanding actual user needs, he defaults to replicating existing structures (e.g., Excel sheets) into digital formats. This results in feature requests that are literal translations of offline workflows, missing opportunities for simplification or redesign. A PO at his level should analyze what the system does, what users need, and how technology improves that—not how to port spreadsheets to web.
+
+**Requirement Definition & Meeting Preparation**
+
+Aman comes to meetings without well-prepared, clearly-defined requirements. This forces the development team to conduct requirement-gathering through questions, slowing delivery and creating ambiguity. For a Product Owner at his experience level, requirements should arrive documented, prioritized, and with clear business context. Instead, developers spend meeting time asking critical hard questions to extract actual requirements—work that should have been done beforehand.
+
+**Receptivity to Feedback & Questions**
+
+Aman treats feedback and questions as personal challenges rather than professional input. Any request for clarification—about requirements, priorities, or decisions—is interpreted as criticism, triggering defensive responses. Questions should be welcome tools for reaching the right answer. Instead, they're met with characterization ("not collaborative," "lacks support") rather than engagement on substance. This causes teams to stop asking questions and issues to go unaddressed.
+
+**Technical Literacy & Conceptual Clarity**
+
+Aman conflates distinct technical concepts (DIFF, HISTORY, AUDIT LOG, RELEASE NOTES) as interchangeable. For a PO designing a versioned specifications platform, not understanding these distinctions is a critical gap. It explains decisions like overriding defects (not understanding audit trail compliance purpose) and treating gaps as defects (not understanding scope vs. accuracy). This is exceptionally unexpected from someone with his experience.
+
+**Constructive Feedback & Dialogue**
+
+Aman needs to learn how to take feedback constructively and engage in dialogue rather than respond with characterizations and labels without data. When questioned or given feedback, the response should be engagement on substance—not unsupported labels. Dialogue requires both listening and responding to the actual point raised. Characterizations shut down dialogue and prevent resolution. When feedback is offered, the response should be to understand it, ask clarifying questions, and either address the concern with evidence or explain why it's not valid—not to label the person offering the feedback.
+
+**Summary**
+
+Aman has potential but needs development in: (1) Strategic analysis before jumping to solutions, (2) Requirement preparation and meeting readiness, (3) Professional receptivity to feedback without taking it personally, (4) Technical literacy in his domain, (5) Constructive dialogue over characterization. These are learnable skills. The question is whether Aman is willing to engage with feedback and improve, or whether he will continue to interpret improvement efforts as attacks.
