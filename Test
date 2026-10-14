@@ -1,13 +1,2 @@
-The format needs to be forward looking. Paavan us technically capable but kags behind for his level along with consistently choosing easier solutions over correct ones. Recent db discussion, where he suggested a reference table should refer a data table instead of the other way around, implementing heracles Auth mechanism at UI anf not the backend essentially making all apis accessible to all roles, suggesting changing the api response object to return lesser data rather than reading lesser data from db itself as part of a performance fix. 
+Apply technical rigor consistently, across design proposals, code review, and day-to-day implementation, rather than defaulting to the easier, more visible fix. This means working through basic questions of correctness, security, and root cause as standard practice, not only when prompted. This is a development area that needs deliberate closing, not incidental improvement over time
 
-As a tech lead he needs to own the outcomes for his tickets. Add the ownership point you drafted here, ai etc.  
-
-Being the tech lead Paavan historically tended to broker the discussion and agreement between the dev and product teams these discussions were rarely documented and any changes in the product specification should have promoted Paavan to speak up on behalf of the team. On occasions I waited for him to speak up knowing that he had carried that conversation with the product team however he would not correct the product assumptions letting the team take the blame for a requirement that never was discussed until I asked hime clearly whether this was the agreement to which he said no.
-
-As the tech lead taking decisions or not, he should have his team's back and should speak up when his team is not confident enough.
-
-After my last email to Shrikant B listing paavans behaviour over 12 weeks, i see changes in his behaviour for the betterment however these changes are too recent to be considered permanent
-
-Needs to learn how to disagree professionally. Disappointments in a situation should not result in disengagement from qork(during September release) 
-
-The over two dozen point should be added like a post script. the items raised in September are already part of the earlier feedback.
