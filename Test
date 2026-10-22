@@ -1,4 +1,43 @@
-You've given me real space to operate and make decisions my own way. You've been genuinely accessible—whenever I've needed guidance or support, you've been there without hesitation. Even when I was new to the team and making changes, you backed me. That kind of trust from your manager when you're trying to do something different matters.
-You've also shown real appreciation, both privately and publicly. Public support especially makes a difference when you're new and changing things—it signals to the team that their manager believes in what they're doing.
-Beyond that, your depth of knowledge in the ecosystem is exceptional. You know the landscape, you know who to reach out to, and you provide real guidance, not just surface-level advice. You're an excellent advocate for your team's growth and promotion.
-I know I have a long way to go. But you've set an example of what genuine sponsorship and support looks like.
+**Results: Individual Objectives (WHAT)**
+
+No formal individual objectives were assigned for this cycle. Since joining on July 2, my primary objective has been the delivery and stabilization of ModelHub, alongside contributions to AIDLC and delivery tracking across teams.
+
+- **Release recovery:** Inherited a 6-week release delay. Identified the root cause: changed and missed requirements were being absorbed into existing tickets, which hid delivery gaps. Introduced mandatory prioritization for every new ask, separate tickets for separate work, and defect classification standards. This stabilized the pipeline and moved the release forward from September 15 to August 15.
+- **Delivery:** Delivered 54 of 56 story points against 30 SP capacity in the August release. The one miss was a last-minute requirement change, handled through clear prioritization.
+- **Hands-on delivery:** Personally developed and delivered approximately 7 to 10 story points to cover a capacity gap on the team, while continuing to review the team's work and keep the overall delivery on track.
+- **Delivery visibility:** Identified 28 unaccepted stories and set up a recurring report to track them. Surfaced a roadmap discrepancy where 7 features were shown as committed but only 2 to 3 were scoped.
+- **PI monitoring dashboard:** Built a PI monitoring dashboard for the Infinity Bunch and Excalibur teams that tracks recurring spillovers, pockets of consistent delay, and items taking longer than estimated. This gives leadership and the teams clear visibility to address delivery risks early.
+- **Architecture:** Drove key schema decisions for Phase 3, including the context-aware lookup layer, the three-case storage model for field values, and the persistent mapping table. Designed a frontend TTL-based caching approach suited to our stateless backend and user scale, avoiding unnecessary complexity.
+- **AI enablement (AIDLC):** Built a PR review skill now distributed org-wide, an AIDLC dashboard, and a PR-merge-gating AI usage tracker. Supported early adoption by the ODS team and mentored a team member on AIDLC development.
+- **AIDLC architecture:** Recommended delivering AIDLC as a plugin rather than a default always-on mode, reducing token consumption and improving the user experience. Advised breaking the AIDLC flow into separate plugins that can each be invoked independently for a small task, or chained to run the full cycle. This positions AIDLC as a flexible framework teams can adopt incrementally, rather than another cumbersome tool.
+
+**Behaviors: The Mastercard Way (HOW)**
+
+**Create Value**
+
+When product proposed creating multiple versions of the specification to replicate Excel-style functionality, I assessed the impact on data growth. Each version would require cloning data across 5 to 6 tables. At roughly 12 versions per publishing cycle and the current rate of 8 publishes a year, that meant about 96 cloned versions annually, with the dataset growing at a compounding rate.
+
+I proposed publishing the data instead, so users can download it without modification. This removed the need for roughly 96 versions a year and simplified the design for end users and engineering alike. The result is a more scalable product with lower storage and maintenance cost.
+
+For AIDLC, I recommended a modular plugin model where each phase can be invoked independently or run as a full cycle. This lowers token cost, improves the experience for developers, and makes adoption easier across teams, which is what allows the framework to scale beyond a single product.
+
+Beyond ModelHub, I contributed reusable AI tooling (PR review skill, usage tracker, AIDLC dashboard) designed to scale across teams rather than serve a single product.
+
+**Move Fast**
+
+- **Prioritize What Matters:** Worked consistently with the product team to establish clearer requirements, and introduced the practice of attaching a priority to every item entering our queue. This lets the team focus on the highest-value work and make deliberate "not now" calls.
+- **Prioritize What Matters:** Created a PI monitoring dashboard for two teams to surface spillovers and recurring delays, turning delivery patterns into data the teams can act on rather than discover late.
+- **Learn and Pivot:** We pick up higher-priority items first and adjust our approach when priorities shift, without losing track of committed scope.
+- **Own the Outcome:** I have owned all 3 releases since joining in July, including the defects that surfaced in them, regardless of when those defects were introduced. I focused on resolving them and putting standards in place to prevent repeats.
+- **Own the Outcome:** When the team faced a capacity crunch, I stepped in to develop and deliver stories myself rather than let commitments slip, while still reviewing the team's work.
+
+**Next Steps / Focus Areas**
+
+*Strengths this year:* Diagnosing structural delivery problems and fixing them at the root, bringing a delayed release back ahead of schedule, stepping in hands-on when capacity was short, making scalable design decisions, creating delivery transparency across teams, and shaping AIDLC into a modular framework with org-wide reach.
+
+*Focus areas:*
+- Continue delivering ModelHub while introducing and streamlining processes that align with the wider organization and support a high-quality product.
+- Build team independence through documented processes and deeper analysis, so every team member can own problems end-to-end and defect rates continue to fall.
+- Continue working toward NSVS: building my knowledge, establishing a shared knowledge base, and delivering high-quality work.
+
+One reminder: confirm whether the version figure is 12 per publishing cycle or 12 per quarter before submitting, since the 96 total depends on it.
