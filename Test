@@ -1,43 +1,18 @@
-**Results: Individual Objectives (WHAT)**
+**CANDIDATE 30 — SANDESH — EVALUATION**
 
-No formal individual objectives were assigned for this cycle. Since joining on July 2, my primary objective has been the delivery and stabilization of ModelHub, alongside contributions to AIDLC and delivery tracking across teams.
+---
 
-- **Release recovery:** Inherited a 6-week release delay. Identified the root cause: changed and missed requirements were being absorbed into existing tickets, which hid delivery gaps. Introduced mandatory prioritization for every new ask, separate tickets for separate work, and defect classification standards. This stabilized the pipeline and moved the release forward from September 15 to August 15.
-- **Delivery:** Delivered 54 of 56 story points against 30 SP capacity in the August release. The one miss was a last-minute requirement change, handled through clear prioritization.
-- **Hands-on delivery:** Personally developed and delivered approximately 7 to 10 story points to cover a capacity gap on the team, while continuing to review the team's work and keep the overall delivery on track.
-- **Delivery visibility:** Identified 28 unaccepted stories and set up a recurring report to track them. Surfaced a roadmap discrepancy where 7 features were shown as committed but only 2 to 3 were scoped.
-- **PI monitoring dashboard:** Built a PI monitoring dashboard for the Infinity Bunch and Excalibur teams that tracks recurring spillovers, pockets of consistent delay, and items taking longer than estimated. This gives leadership and the teams clear visibility to address delivery risks early.
-- **Architecture:** Drove key schema decisions for Phase 3, including the context-aware lookup layer, the three-case storage model for field values, and the persistent mapping table. Designed a frontend TTL-based caching approach suited to our stateless backend and user scale, avoiding unnecessary complexity.
-- **AI enablement (AIDLC):** Built a PR review skill now distributed org-wide, an AIDLC dashboard, and a PR-merge-gating AI usage tracker. Supported early adoption by the ODS team and mentored a team member on AIDLC development.
-- **AIDLC architecture:** Recommended delivering AIDLC as a plugin rather than a default always-on mode, reducing token consumption and improving the user experience. Advised breaking the AIDLC flow into separate plugins that can each be invoked independently for a small task, or chained to run the full cycle. This positions AIDLC as a flexible framework teams can adopt incrementally, rather than another cumbersome tool.
+**TECHNICAL REASONING:**
 
-**Behaviors: The Mastercard Way (HOW)**
+Sandesh demonstrated L5-caliber distributed systems architecture: circuit breaker with failure classification (temporary vs permanent), exponential backoff, idempotency-safe retries, Kafka partitioning by payment ID, and back-pressure via capacity service that aggregates consumer lag. Coding challenges executed cleanly (median sort logic, masking with null validation) with no conceptual gaps. His resilience system for Barclays shows thoughtful failure handling: contingency queue overflow control via gateway 429s, graceful degradation, and UX awareness (misleading error messaging). Knowledge spans production payment systems end-to-end.
 
-**Create Value**
+---
 
-When product proposed creating multiple versions of the specification to replicate Excel-style functionality, I assessed the impact on data growth. Each version would require cloning data across 5 to 6 tables. At roughly 12 versions per publishing cycle and the current rate of 8 publishes a year, that meant about 96 cloned versions annually, with the dataset growing at a compounding rate.
+**BEHAVIORAL REASONING:**
 
-I proposed publishing the data instead, so users can download it without modification. This removed the need for roughly 96 versions a year and simplified the design for end users and engineering alike. The result is a more scalable product with lower storage and maintenance cost.
+Articulate and structured thinker—breaks problems into stages (detect → retry → protect → preserve). Acknowledged distributed system tradeoffs and gaps in thinking (multiple gateway instances needing centralized queue view). Honest when exploring ideas ("I would use...") rather than claiming certainty. Calm problem-solver under Neha's probing questions. No defensiveness when challenged on architectural choices.
 
-For AIDLC, I recommended a modular plugin model where each phase can be invoked independently or run as a full cycle. This lowers token cost, improves the experience for developers, and makes adoption easier across teams, which is what allows the framework to scale beyond a single product.
 
-Beyond ModelHub, I contributed reusable AI tooling (PR review skill, usage tracker, AIDLC dashboard) designed to scale across teams rather than serve a single product.
+**OVERALL:**
 
-**Move Fast**
-
-- **Prioritize What Matters:** Worked consistently with the product team to establish clearer requirements, and introduced the practice of attaching a priority to every item entering our queue. This lets the team focus on the highest-value work and make deliberate "not now" calls.
-- **Prioritize What Matters:** Created a PI monitoring dashboard for two teams to surface spillovers and recurring delays, turning delivery patterns into data the teams can act on rather than discover late.
-- **Learn and Pivot:** We pick up higher-priority items first and adjust our approach when priorities shift, without losing track of committed scope.
-- **Own the Outcome:** I have owned all 3 releases since joining in July, including the defects that surfaced in them, regardless of when those defects were introduced. I focused on resolving them and putting standards in place to prevent repeats.
-- **Own the Outcome:** When the team faced a capacity crunch, I stepped in to develop and deliver stories myself rather than let commitments slip, while still reviewing the team's work.
-
-**Next Steps / Focus Areas**
-
-*Strengths this year:* Diagnosing structural delivery problems and fixing them at the root, bringing a delayed release back ahead of schedule, stepping in hands-on when capacity was short, making scalable design decisions, creating delivery transparency across teams, and shaping AIDLC into a modular framework with org-wide reach.
-
-*Focus areas:*
-- Continue delivering ModelHub while introducing and streamlining processes that align with the wider organization and support a high-quality product.
-- Build team independence through documented processes and deeper analysis, so every team member can own problems end-to-end and defect rates continue to fall.
-- Continue working toward NSVS: building my knowledge, establishing a shared knowledge base, and delivering high-quality work.
-
-One reminder: confirm whether the version figure is 12 per publishing cycle or 12 per quarter before submitting, since the 96 total depends on it.
+Sandesh demonstrates L5 systems thinking despite only 3.5 years experience—his resilience architecture for Barclays (circuit breaker, back pressure, Kafka partitioning, idempotency) is production-grade and well-reasoned. He codes cleanly, thinks through distributed tradeoffs, and communicates architectural decisions with clarity and humility. Hire him as a senior backend engineer; he'll grow into L6 quickly with the right mentorship.
