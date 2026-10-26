@@ -1,18 +1,40 @@
-**CANDIDATE 30 — SANDESH — EVALUATION**
+**CANDIDATE 28 — KEVIN — FORMAL EVALUATION**
 
 ---
 
 **TECHNICAL REASONING:**
 
-Sandesh demonstrated L5-caliber distributed systems architecture: circuit breaker with failure classification (temporary vs permanent), exponential backoff, idempotency-safe retries, Kafka partitioning by payment ID, and back-pressure via capacity service that aggregates consumer lag. Coding challenges executed cleanly (median sort logic, masking with null validation) with no conceptual gaps. His resilience system for Barclays shows thoughtful failure handling: contingency queue overflow control via gateway 429s, graceful degradation, and UX awareness (misleading error messaging). Knowledge spans production payment systems end-to-end.
+Kevin owns the audit component (ABD/Bezox reconciliation) deeply: demonstrates solid fault isolation (corrupt messages quarantined to DLQ, batch not killed), selective retry with exponential backoff (100ms→300ms→900ms), transaction status verification before safe re-retry, and scheduler-based backfill for missed windows. However, critical gaps undermine senior architect caliber: single shared DB instance across regions is a SPOF with no replication strategy articulated, distributed queue depth visibility handled vaguely (acknowledges multiple gateways but unclear on Redis/shared metric solution), design patterns not named (async message processing is present but saga/event sourcing distinction missing), and graceful shutdown process undefined. Multi-region resilience incomplete—no RTO/RPO targets discussed, split-brain handling absent, active-active vs active-passive unclear.
 
 ---
 
 **BEHAVIORAL REASONING:**
 
-Articulate and structured thinker—breaks problems into stages (detect → retry → protect → preserve). Acknowledged distributed system tradeoffs and gaps in thinking (multiple gateway instances needing centralized queue view). Honest when exploring ideas ("I would use...") rather than claiming certainty. Calm problem-solver under Neha's probing questions. No defensiveness when challenged on architectural choices.
+Intellectually honest when uncertain ("I'd have to check," "not sure about parallelism") rather than bluffing. Speaks through complex flows methodically. However, communication breaks multiple times (audio issues, heavy acronym-laden explanations without domain context). Shows execution-level ownership (built and maintains audit) but not architectural leadership—features inherited, constraints inherited, improvements are post-outage reactive rather than proactive. Two years at Mastercard as individual contributor suggest limited exposure to design-from-scratch or cross-system thinking.
 
+---
 
 **OVERALL:**
 
-Sandesh demonstrates L5 systems thinking despite only 3.5 years experience—his resilience architecture for Barclays (circuit breaker, back pressure, Kafka partitioning, idempotency) is production-grade and well-reasoned. He codes cleanly, thinks through distributed tradeoffs, and communicates architectural decisions with clarity and humility. Hire him as a senior backend engineer; he'll grow into L6 quickly with the right mentorship.
+Kevin is a solid L4 individual contributor with deep knowledge of one critical component, but lacks the architectural breadth and proactive design ownership expected at L5/L6 senior level. His audit system is production-grade for its scope (payment reconciliation), but multi-region resilience gaps and vague distributed systems reasoning indicate he executes well within defined architecture, not designs architecture itself. Hire for L4 Backend Engineer role with audit/reconciliation specialization; mentor on distributed systems patterns and architecture ownership for future growth.
+
+
+**CANDIDATE 32 — FORMAL EVALUATION**
+
+---
+
+**TECHNICAL REASONING:**
+
+Candidate demonstrates L4-L5 backend engineering with strong architectural thinking. Pragmatically optimized eSphere trade settlement platform through session-based caching (stable reference data) while understanding when to graduate to Redis for frequently-changing data—shows correct tool-for-job mentality. Solid grasp of Spring Boot layered architecture, SOLID principles, and design patterns (Strategy/Factory distinction, DI/IoC concepts). Clean problem-solving on coding challenges (median, masking). Gaps: Spring Registry implementation specifics, exact bean configuration patterns for strategy selection. Domain knowledge strong (trade settlement, reference data modeling).
+
+---
+
+**BEHAVIORAL REASONING:**
+
+Self-corrects under pressure: initially said "REST controller" for masking, immediately recognized the design gap and pivoted to Factory/DI solution. Clear communicator who explains reasoning behind choices (why session cache over Redis). Owns optimization work end-to-end, not just execution. Mentions mentoring juniors and cross-functional collaboration credibly. Growth-oriented ("looking for larger scale systems") without false humility.
+
+---
+
+**OVERALL:**
+
+Candidate 32 is a pragmatic mid-senior engineer ready for L5 responsibilities. His 3+ years at Deutsche Bank on complex trade settlement systems, combined with sharp design pattern thinking and self-correcting problem-solving, indicates both depth and maturity. Hire him as L5 Senior Backend Engineer; he'll own system design ownership and mentor L3/L4 engineers effectively.
