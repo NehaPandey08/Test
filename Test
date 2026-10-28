@@ -1,40 +1,19 @@
-**CANDIDATE 28 — KEVIN — FORMAL EVALUATION**
+**CANDIDATE 33 — HARSHVARDHAN — EVALUATION**
 
 ---
 
 **TECHNICAL REASONING:**
 
-Kevin owns the audit component (ABD/Bezox reconciliation) deeply: demonstrates solid fault isolation (corrupt messages quarantined to DLQ, batch not killed), selective retry with exponential backoff (100ms→300ms→900ms), transaction status verification before safe re-retry, and scheduler-based backfill for missed windows. However, critical gaps undermine senior architect caliber: single shared DB instance across regions is a SPOF with no replication strategy articulated, distributed queue depth visibility handled vaguely (acknowledges multiple gateways but unclear on Redis/shared metric solution), design patterns not named (async message processing is present but saga/event sourcing distinction missing), and graceful shutdown process undefined. Multi-region resilience incomplete—no RTO/RPO targets discussed, split-brain handling absent, active-active vs active-passive unclear.
+Harshvardhan demonstrated solid coding fundamentals: completed reverse vowels challenge with clean two-pointer logic, explained the algorithm reasoning clearly (bounds checking, vowel detection), and correctly identified what's redundant in his own code. Authentication implementation shows thoughtful design (JWT signature validation, role-based middleware, expiry checks). Domain knowledge impressive for 1 year—articulated end-to-end loan automation flow with clear understanding of extraction, reconciliation, and approval stages. Code organization in service layer shows separation of concerns.
 
 ---
 
 **BEHAVIORAL REASONING:**
 
-Intellectually honest when uncertain ("I'd have to check," "not sure about parallelism") rather than bluffing. Speaks through complex flows methodically. However, communication breaks multiple times (audio issues, heavy acronym-laden explanations without domain context). Shows execution-level ownership (built and maintains audit) but not architectural leadership—features inherited, constraints inherited, improvements are post-outage reactive rather than proactive. Two years at Mastercard as individual contributor suggest limited exposure to design-from-scratch or cross-system thinking.
+Explains logic step-by-step without defensive posturing, even when challenged on design decisions. Accepts feedback immediately (SRP violation acknowledged cleanly). Asks clarifying questions about team structure and tech stack. Demonstrates pragmatism—understands tradeoffs between speed and scalability, mentions Postgres→Redis migration plan proactively. Shows learning velocity when gaps are pointed out; no arrogance about junior-level mistakes.
 
 ---
 
 **OVERALL:**
 
-Kevin is a solid L4 individual contributor with deep knowledge of one critical component, but lacks the architectural breadth and proactive design ownership expected at L5/L6 senior level. His audit system is production-grade for its scope (payment reconciliation), but multi-region resilience gaps and vague distributed systems reasoning indicate he executes well within defined architecture, not designs architecture itself. Hire for L4 Backend Engineer role with audit/reconciliation specialization; mentor on distributed systems patterns and architecture ownership for future growth.
-
-
-**CANDIDATE 32 — FORMAL EVALUATION**
-
----
-
-**TECHNICAL REASONING:**
-
-Candidate demonstrates L4-L5 backend engineering with strong architectural thinking. Pragmatically optimized eSphere trade settlement platform through session-based caching (stable reference data) while understanding when to graduate to Redis for frequently-changing data—shows correct tool-for-job mentality. Solid grasp of Spring Boot layered architecture, SOLID principles, and design patterns (Strategy/Factory distinction, DI/IoC concepts). Clean problem-solving on coding challenges (median, masking). Gaps: Spring Registry implementation specifics, exact bean configuration patterns for strategy selection. Domain knowledge strong (trade settlement, reference data modeling).
-
----
-
-**BEHAVIORAL REASONING:**
-
-Self-corrects under pressure: initially said "REST controller" for masking, immediately recognized the design gap and pivoted to Factory/DI solution. Clear communicator who explains reasoning behind choices (why session cache over Redis). Owns optimization work end-to-end, not just execution. Mentions mentoring juniors and cross-functional collaboration credibly. Growth-oriented ("looking for larger scale systems") without false humility.
-
----
-
-**OVERALL:**
-
-Candidate 32 is a pragmatic mid-senior engineer ready for L5 responsibilities. His 3+ years at Deutsche Bank on complex trade settlement systems, combined with sharp design pattern thinking and self-correcting problem-solving, indicates both depth and maturity. Hire him as L5 Senior Backend Engineer; he'll own system design ownership and mentor L3/L4 engineers effectively.
+Harshvardhan completed both coding challenges cleanly and articulated his reasoning with clarity. Shows decent coding fundamentals and strong domain ownership of the loan automation system. JWT authentication flow implementation demonstrates thoughtful middleware design and role-based access control. Early-career engineer with solid foundations and learnable mindset.
