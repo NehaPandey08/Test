@@ -1,19 +1,19 @@
-**CANDIDATE 33 — HARSHVARDHAN — EVALUATION**
+Hi Karan,
 
----
+Vaishali has shared a doctor's note dated 01/11, advising that she should not travel for the next two months due to extreme dizziness and vertigo. I would like your guidance on the following:
 
-**TECHNICAL REASONING:**
+1. Pending WFE for the past period
+As advised in your email of 21/10, her absence from office before this note needs to be recorded as Work from Elsewhere. As of today, she has not applied for it. Could you advise on the next step if this remains pending?
 
-Harshvardhan demonstrated solid coding fundamentals: completed reverse vowels challenge with clean two-pointer logic, explained the algorithm reasoning clearly (bounds checking, vowel detection), and correctly identified what's redundant in his own code. Authentication implementation shows thoughtful design (JWT signature validation, role-based middleware, expiry checks). Domain knowledge impressive for 1 year—articulated end-to-end loan automation flow with clear understanding of extraction, reconciliation, and approval stages. Code organization in service layer shows separation of concerns.
+2. Qualification of the doctor
+The note has been issued by a BHMS practitioner. As I am new to Mastercard, I would like to understand the policy here. Is there a specific qualification or type of practitioner required for a medical certificate supporting a two-month exemption?
 
----
+3. Delivery and medical leave
+Over the last six weeks, there has been a significant gap in her delivery. Work she has committed to has not been completed, and she has not been able to keep pace with the team. Given the symptoms described in the note, this may well be a result of her condition. If so, it may be better for her recovery to take medical leave for these two months rather than continue working from home under strain, and rejoin once she is well.
 
-**BEHAVIORAL REASONING:**
+Could you advise whether this is an option under our policy, and how we should approach it with her?
 
-Explains logic step-by-step without defensive posturing, even when challenged on design decisions. Accepts feedback immediately (SRP violation acknowledged cleanly). Asks clarifying questions about team structure and tech stack. Demonstrates pragmatism—understands tradeoffs between speed and scalability, mentions Postgres→Redis migration plan proactively. Shows learning velocity when gaps are pointed out; no arrogance about junior-level mistakes.
+I can share specific examples of the delivery gap if needed.
 
----
-
-**OVERALL:**
-
-Harshvardhan completed both coding challenges cleanly and articulated his reasoning with clarity. Shows decent coding fundamentals and strong domain ownership of the loan automation system. JWT authentication flow implementation demonstrates thoughtful middleware design and role-based access control. Early-career engineer with solid foundations and learnable mindset.
+Regards,
+Neha
