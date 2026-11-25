@@ -1,43 +1,4 @@
-Hi Shivani,
-
-Thanks for the discussion yesterday. Recapping what we agreed so we're aligned.
-
-Your action items:
-
-1. Work order process doc: Check whether the existing document for work orders and file replays is current. Update it if needed and share it with me by the end of this week.
-2. Link that document in every work order raised to BizOps or the TPMs, so the steps are available to whoever picks it up.
-3. Leave coverage: Before you and Sanket go on leave, hand over the flow knowledge and process so that someone is named and able to drive this while you are out. Please confirm who that is with me before you leave.
-4. AOP stories: Hand off the stories you cannot fit before your leave. When you are back, re-analyze them and tell me whether the current story points hold or by how much they would increase. We will decide on the plan based on that data.
-5. ITF testing fixes: Please log the issues you are fixing in the background during ITF testing as defects or sub-tasks, so the effort is visible on the Jira board and reflected in our estimates.
-
-My action items:
-
-1. I will speak to Shrikant about DB access for SMB, TPM ownership of work orders and file replays for the other flows, and the gap where Priyanka has not picked this up. I am not committing to an outcome, but I will find out what is possible.
-2. When there is room for another person on a POC, I will consider you. I can't give a timeline, and the POC assignments are not tied to NSVS completion.
-
-Let me know if I have missed anything or if anything here differs from your understanding.
-
-Regards,
-Neha
-
-Hi Apurva,
-
-Thank you for raising your concerns in today's discussion. You had to absorb a delay that wasn't yours, and I've noted that and raised it through the right channels.
-
-On releases: the pattern of releases running late, needing repeated fixes and extending into the night has been there since the beginning. I have been tracking it, and I'm glad the team is now seeing it too. The 4 AM release happened because the team hasn't been doing risk analysis properly before committing.
-
-You have done good work so far, and I have no concerns about your performance.
-
-What I need going forward:
-- A time commitment, to me or to product, must be backed by a risk analysis and discussed with the wider team first, so the people who can see the risks can raise them before we commit.
-- We commit as a team, not as individuals committing to individual stories. Once we commit, we are accountable for that date. We don't commit and then walk it back when it stops working.
-- If you see a risk in someone else's work that could cause a delay, speak to them directly, and raise it with me, including whether they can realistically commit to it.
-- If you see a commitment being made that can't easily be upheld, raise it with the right people at the time, not after the date has passed.
-- The team owns its own misses, and we need to do better in our releases.
-
-What I'd like from you:
-- Raise a dependency or time conflict with me as soon as you see it, rather than extending your hours to cover it.
-- Tell me when your own delivery is at risk, so we can plan around it.
-
-Thanks,
-Neha
+On ModelHub, we use AI in two ways: how we build, and what we build.
+The first is AIDLC, our AI-driven development lifecycle. It helps the team analyse, build, review and document work efficiently.
+The second is a set of AI agents built into the product. The data for payment standards like ISO 8583, ISO 20022 and Nexo is spread across PDFs, Excel sheets, Word documents, XSD schemas and GitHub repositories, each with its own format and structure. Before ModelHub, users had to go through all of these sources, work out which parts were relevant, match them up and enter everything by hand. That took [X] hours per release and made it easy to miss or misread something. Our agents now go through every one of these sources and pull out the relevant fields, rules and mappings. They match them up across sources, turn them into structured data and seed it into the ModelHub database for the team to review.
+Next, we plan to bring AI into business workflows such as maker-checker and version comparison.
